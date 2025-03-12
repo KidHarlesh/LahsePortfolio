@@ -37,7 +37,7 @@ const HeroSection = () => {
             </motion.h1>
 
             <motion.p
-              className="bg-gradient-to-r from-[#6675ff] to-[#0006ad] text-transparent bg-clip-text text-5xl lg:text-7xl  font-semibold pt-2 lg:pt-4 "
+              className="bg-gradient-to-r from-[#6675ff] to-[#0006ad] text-transparent bg-clip-text text-4xl lg:text-7xl  font-bold  pt-2 lg:pt-4 "
               initial={{ y: 0 }}
               animate={{ y: 10 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
