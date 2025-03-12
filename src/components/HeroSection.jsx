@@ -44,6 +44,7 @@ const HeroSection = () => {
             >
               {displayedText}
             </motion.p>
+
             {/* About Text */}
             <div className="hidden lg:block">
               <p className="text-2xl font-medium text-[#DDDDDD] mt-10 ">
@@ -84,9 +85,10 @@ const HeroSection = () => {
               src={LahseImage}
               alt="LASHEIMAGE"
               className="rounded-3xl w-[80%]  lg:w-[70%] border border-[#273291cd]"
-              initial={{ rotate: 5 }}
+              initial={{ rotate: 7 }}
               whileHover={{ rotate: 0 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
+              whileTap={{ rotate: 0 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
             />
           </div>
         </div>
