@@ -17,7 +17,7 @@ const Toggle = () => {
 }
   return (
     <section className=" ">
-      <div className=" lg:hidden ">
+      <div className=" lg:hidden  ">
         <div className="container p-5">
           <div className="flex justify-between items-center">
             <a href="">

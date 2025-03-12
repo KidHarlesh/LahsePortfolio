@@ -23,7 +23,7 @@ const HeroSection = () => {
   }, [index, text]);
 
   return (
-    <section className="z-10 lg:pt-16 lg:containers lg:h-screen">
+    <section className="z-10 lg:pt-16 lg:containers lg:h-screen pb-40">
       <div className="containers mt-8 text-left">
         <div className="lg:flex">
           <div className="">

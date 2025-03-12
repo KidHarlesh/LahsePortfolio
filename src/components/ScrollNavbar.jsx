@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const ScrollNavbar = () => {
   const [nav, setNav] = useState(false);
-  const [showScrollNav, setShowScrollNav] = useState(false);
+  const [showScrollNav, setShowScrollNav] = useState();
   const lastScrollY = useRef(0); // Using useRef instead of useState
 
   const Toggle = () => {
