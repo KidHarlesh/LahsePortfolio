@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family:"Manrope", sans-serif;
+  box-sizing: border;
+  padding: 0%;;
+  margin: 0%;
+
+}
+
+.container {
+  @apply w-[97%] mx-auto;
+}
+.containers{
+  @apply w-[90%] mx-auto;
+}
+
+.active {
+  background-color: #4141a5;
+}
+
