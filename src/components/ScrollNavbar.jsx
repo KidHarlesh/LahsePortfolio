@@ -13,21 +13,24 @@ const ScrollNavbar = () => {
   const Toggle = () => {
     setNav(!nav);
   };
+useEffect(() => {
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > lastScrollY.current) {
-        setShowScrollNav(true);
-      } else {
-        setShowScrollNav(false);
-      }
-      lastScrollY.current = window.scrollY; // Update ref value without triggering re-renders
-    };
+    if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+      // Show navbar when scrolling down & only after scrolling 100px
+      setShowScrollNav(true);
+    } else {
+      // Keep it hidden when scrolling up
+      setShowScrollNav(false);
+    }
 
-    window.addEventListener("scroll", handleScroll);
+    lastScrollY.current = currentScrollY;
+  };
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []); // Empty dependency array ensures it runs only once on mount
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
   return (
     <section>

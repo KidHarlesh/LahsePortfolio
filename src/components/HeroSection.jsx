@@ -23,8 +23,26 @@ const HeroSection = () => {
   }, [index, text]);
 
   return (
-    <section className="z-10 lg:pt-16 lg:containers lg:h-screen pb-40">
-      <div className="containers mt-8 text-left">
+    <section className=" relative z-0 lg:pt-16 lg:containers lg:h-screen pb-40">
+      <motion.h1
+        className="hidden lg:block absolute text-[18em] bottom-[10rem] right-[31rem] 
+             text-transparent bg-clip-text opacity-5 -z-10 font-bold"
+        style={{
+          WebkitTextStroke: "3px #273291cd", // Blue border effect
+        }}
+        animate={{
+          scale: [1, 1.05, 1], // Expands slightly and contracts
+          opacity: [0.6, 1, 0.6], // Fades in and out
+        }}
+        transition={{
+          duration: 3, // Runs every 3 seconds
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        HI
+      </motion.h1>
+      <div className="containers mt-8 text-left z-10">
         <div className="lg:flex">
           <div className="">
             <motion.h1
@@ -37,7 +55,7 @@ const HeroSection = () => {
             </motion.h1>
 
             <motion.p
-              className="bg-gradient-to-r from-[#6675ff] to-[#0006ad] text-transparent bg-clip-text text-[40px] leading-[48px] lg:text-7xl  font-extrabold  pt-2 lg:pt-4 "
+              className="bg-gradient-to-r from-[#6675ff] to-[#0006ad] text-transparent bg-clip-text text-[40px] leading-[48px] lg:text-7xl  font-extrabold  pt-2 lg:pt-4  "
               initial={{ y: 0 }}
               animate={{ y: 10 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
@@ -46,12 +64,11 @@ const HeroSection = () => {
             </motion.p>
 
             {/* About Text */}
-            <div className="hidden lg:block">
-              <p className="text-2xl font-medium text-[#DDDDDD] mt-10 ">
+            <div className="hidden lg:block   ">
+              <p className="text-2xl font-medium text-[#DDDDDD] mt-10 z-10  ">
                 I create intuitive, responsive, and visually engaging web
                 interfaces that improve user experience and performance.
               </p>
-
               {/* Download CV Button */}
               <div className="flex items-center gap-4 mt-10">
                 <a href={MyCV} download="Toluwalase_CV.pdf">
@@ -66,21 +83,27 @@ const HeroSection = () => {
                   <a href="https://x.com/harlesh444/" target="_blank">
                     <FaXTwitter className="hover:text-[#1DA1F2] transition duration-300 cursor-pointer border rounded-full  p-1 border-[#3347ff] " />
                   </a>
-                  <a href="">
+                  <a
+                    href="https://www.linkedin.com/in/alowoesin-toluwalase-956249337/ "
+                    target="_blank"
+                  >
                     <FaLinkedinIn className="hover:text-[#0077B5] transition duration-300 cursor-pointer border  rounded-full  p-1 border-[#3347ff]" />
                   </a>
-                  <a href="">
+                  <a
+                    href="https://www.instagram.com/big_harlesh1/"
+                    target="_blank"
+                  >
                     {" "}
                     <FaInstagram className="hover:text-[#E1306C] transition duration-300 cursor-pointer border rounded-full  p-1 border-[#3347ff]" />
                   </a>
-                  <a href="">
+                  <a href="https://github.com/KidHarlesh/" target="_blank">
                     <FaGithub className="hover:text-gray-400 transition duration-300 cursor-pointer border  rounded-full   p-1 border-[#3347ff]" />
                   </a>
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex justify-center mt-20 z-0 lg:mt-0">
+          <div className="flex justify-center mt-20 z-10 lg:mt-0">
             <motion.img
               src={LahseImage}
               alt="LASHEIMAGE"
@@ -95,7 +118,7 @@ const HeroSection = () => {
 
         {/* About Text */}
         <div className="lg:hidden">
-          <p className="text-xl font-medium text-[#DDDDDD] mt-10 ">
+          <p className="text-xl font-medium text-[#DDDDDD] mt-10  ">
             I create intuitive, responsive, and visually engaging web interfaces
             that improve user experience and performance.
           </p>
@@ -116,14 +139,17 @@ const HeroSection = () => {
           <a href="https://x.com/harlesh444/" target="_blank">
             <FaXTwitter className="hover:text-[#1DA1F2] transition duration-300 cursor-pointer border rounded-full  p-1 border-[#3347ff] " />
           </a>
-          <a href="https://www.linkedin.com/in/alowoesin-toluwalase-956249337/">
+          <a
+            href="https://www.linkedin.com/in/alowoesin-toluwalase-956249337/ "
+            target="_blank"
+          >
             <FaLinkedinIn className="hover:text-[#0077B5] transition duration-300 cursor-pointer border  rounded-full  p-1 border-[#3347ff]" />
           </a>
-          <a href="https://www.instagram.com/big_harlesh1/">
+          <a href="https://www.instagram.com/big_harlesh1/" target="_blank">
             {" "}
             <FaInstagram className="hover:text-[#E1306C] transition duration-300 cursor-pointer border rounded-full  p-1 border-[#3347ff]" />
           </a>
-          <a href="https://www.instagram.com/big_harlesh1/">
+          <a href="https://github.com/KidHarlesh/" target="_blank">
             <FaGithub className="hover:text-gray-400 transition duration-300 cursor-pointer border  rounded-full   p-1 border-[#3347ff]" />
           </a>
         </div>
