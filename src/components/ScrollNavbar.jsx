@@ -16,10 +16,10 @@ const ScrollNavbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY < lastScrollY) {
-        setShowScrollNav(false); 
-      } else {
+      if (window.scrollY > lastScrollY) {
         setShowScrollNav(true); 
+      } else {
+        setShowScrollNav(false); 
       }
       setLastScrollY(window.scrollY);
     };
@@ -30,7 +30,7 @@ const ScrollNavbar = () => {
 
   return (
     <section>
-      {/* Scroll Navbar (Appears when scrolling up) */}
+      {/* Scroll Navbar (Appears when scrolling down) */}
       <motion.div
         className="fixed top-0 left-0 w-full bg-gradient-to-r from-[#000428] to-[#0b10ba] shadow-lg z-50 py-3 px-6 "
         initial={{ y: -100, opacity: 0 }}
