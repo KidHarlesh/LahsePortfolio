@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Logo from "../assets/lasheToolsBg.png";
 import { FiAlignRight } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const ScrollNavbar = () => {
   const [nav, setNav] = useState(false);
   const [showScrollNav, setShowScrollNav] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollY = useRef(0); // Using useRef instead of useState
 
   const Toggle = () => {
     setNav(!nav);
@@ -16,17 +16,18 @@ const ScrollNavbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        setShowScrollNav(true); 
+      if (window.scrollY > lastScrollY.current) {
+        setShowScrollNav(true);
       } else {
-        setShowScrollNav(false); 
+        setShowScrollNav(false);
       }
-      setLastScrollY(window.scrollY);
+      lastScrollY.current = window.scrollY; // Update ref value without triggering re-renders
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []); // Empty dependency array ensures it runs only once on mount
 
   return (
     <section>
@@ -82,7 +83,7 @@ const ScrollNavbar = () => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden absolute top-full left-0 w-full bg-[rgb(50,40,150)]  z-40"
           >
-            <nav >
+            <nav>
               <ul className="text-2xl flex flex-col gap-6 text-white font-medium py-5 px-4 h-screen">
                 <li> SERVICE</li>
                 <li>WORKS</li>
