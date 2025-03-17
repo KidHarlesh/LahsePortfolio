@@ -17,15 +17,15 @@ const HeroSection = () => {
       const timeout = setTimeout(() => {
         setDisplayedText((prev) => prev + text[index]);
         setIndex(index + 1);
-      }, 50); // Adjust typing speed here (100ms per letter)
+      }, 50); // Adjust typing speed here 
       return () => clearTimeout(timeout);
     }
   }, [index, text]);
 
   return (
-    <section className=" relative z-0 lg:pt-16 lg:containers lg:h-screen pb-40">
+    <section className=" relative z-0 lg:pt-16 lg:containers ">
       <motion.h1
-        className="hidden lg:block absolute text-[18em] bottom-[10rem] right-[31rem] 
+        className="hidden lg:block absolute text-[18em] bottom-[5rem] right-[31rem] 
              text-transparent bg-clip-text opacity-5 -z-10 font-bold"
         style={{
           WebkitTextStroke: "3px #273291cd", // Blue border effect
@@ -42,6 +42,7 @@ const HeroSection = () => {
       >
         HI
       </motion.h1>
+
       <div className="containers mt-8 text-left z-10">
         <div className="lg:flex">
           <div className="">
@@ -116,22 +117,20 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* About Text */}
+        {/* About Text mobile view only */}
         <div className="lg:hidden">
           <p className="text-xl font-medium text-[#DDDDDD] mt-10  ">
             I create intuitive, responsive, and visually engaging web interfaces
             that improve user experience and performance.
           </p>
-
-          {/* Download CV Button */}
+          {/* Download CV Button mobile view only */}
           <a href={MyCV} download="Toluwalase_CV.pdf">
             <button className="my-4 border text-xl px-10 py-2 rounded-3xl bg-gradient-to-r from-[#9da7ff] to-[#2e34d0] text-transparent bg-clip-text border-[#3347ff]">
               Download CV
             </button>
           </a>
         </div>
-
-        {/* Social Icons */}
+        {/* Social Icons mobile view only */}
         <div
           className="flex 
         gap-6 mt-4  text-3xl text-[#5f6bd0] lg:hidden"
@@ -153,6 +152,7 @@ const HeroSection = () => {
             <FaGithub className="hover:text-gray-400 transition duration-300 cursor-pointer border  rounded-full   p-1 border-[#3347ff]" />
           </a>
         </div>
+
       </div>
     </section>
   );

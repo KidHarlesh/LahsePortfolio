@@ -1,11 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import Logo from "../assets/lasheToolsBg.png";
 import { FiAlignRight } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import { motion } from "framer-motion";
+import { NavContext } from "../components/NavContext";
 
 
-const ScrollNavbar = () => {
+const ScrollNavbar = ({ onClick }) => {
+  const navLinks = useContext(NavContext);
   const [nav, setNav] = useState(false);
   const [showScrollNav, setShowScrollNav] = useState();
   const lastScrollY = useRef(0); // Using useRef instead of useState
@@ -13,24 +15,24 @@ const ScrollNavbar = () => {
   const Toggle = () => {
     setNav(!nav);
   };
-useEffect(() => {
-  const handleScroll = () => {
-    const currentScrollY = window.scrollY;
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
 
-    if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
-      // Show navbar when scrolling down & only after scrolling 100px
-      setShowScrollNav(true);
-    } else {
-      // Keep it hidden when scrolling up
-      setShowScrollNav(false);
-    }
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        // Show navbar when scrolling down & only after scrolling 100px
+        setShowScrollNav(true);
+      } else {
+        // Keep it hidden when scrolling up
+        setShowScrollNav(false);
+      }
 
-    lastScrollY.current = currentScrollY;
-  };
+      lastScrollY.current = currentScrollY;
+    };
 
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <section>
@@ -43,7 +45,7 @@ useEffect(() => {
       >
         <div className=" ">
           <div className=" flex justify-between items-center">
-            <a href="">
+            <a href="#">
               <motion.img
                 animate={{ x: -10 }}
                 transition={{ duration: 1, ease: "easeInOut" }}
@@ -88,12 +90,14 @@ useEffect(() => {
           >
             <nav>
               <ul className="text-2xl flex flex-col gap-6 text-white font-medium py-5 px-4 h-screen">
-                <li> SERVICE</li>
-                <li>WORKS</li>
-                <li>RESUME</li>
-                <li>SKILLS</li>
-                <li>TESTIMONIALS</li>
-                <li>CONTACTS</li>
+                {" "}
+                {navLinks.map((link) => (
+                  <li key={link.id}>
+                    <a href={`#${link.id}`} onClick={onClick}>
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </nav>
           </motion.div>
