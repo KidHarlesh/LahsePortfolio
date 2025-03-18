@@ -1,6 +1,6 @@
-import React, { useContext } from "react"; // ✅ Import useContext
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
-import { NavContext } from "../components/NavContext"; // Import NavContext
+import { NavContext } from "../components/NavContext"; 
 
 const StaticMenu = ({ nav, onClick }) => {
   const navLinks = useContext(NavContext); // Get navLinks from context

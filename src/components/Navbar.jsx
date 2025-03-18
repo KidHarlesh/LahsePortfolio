@@ -36,7 +36,7 @@ const Navbar = ({ onClick }) => {
               </li>
             ))}
           </ul>
-          <button className=" text-white border px-5 py-2 rounded-2xl bg-gradient-to-l from-[#000428] to-[#040762] text-lg border-[#000428] font-semibold">
+          <button className=" text-white border px-5 py-2 rounded-2xl bg-gradient-to-l from-[#000428] to-[#040762] text-lg border-[#2137ff] font-semibold">
             <a href="">Hire Me!</a>
           </button>
         </nav>

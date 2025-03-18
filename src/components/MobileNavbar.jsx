@@ -20,7 +20,7 @@ const MobileNavbar = () => {
           <div className="flex justify-between items-center">
             <a href="#">
               <motion.img
-              initial={{ x: 10 }}
+                initial={{ x: 10 }}
                 animate={{ x: -10 }}
                 transition={{ duration: 1, ease: "easeInOut" }}
                 src={Logo}
@@ -29,7 +29,7 @@ const MobileNavbar = () => {
               />
             </a>
             <div className="flex justify-between items-center gap-8">
-              <button className="border py-4 px-7 rounded-3xl text-lg font-semibold text-white bg-gradient-to-r from-[#000428] to-[#040762] border-[#200e42]">
+              <button className="border py-4 px-7 rounded-3xl text-lg font-semibold text-white bg-gradient-to-r from-[#000428] to-[#040762] border-[#2137ff]">
                 Hire Me!
               </button>
               <motion.div
@@ -51,7 +51,7 @@ const MobileNavbar = () => {
             </div>
           </div>
         </div>
-        {/* ✅ Passing nav and onclick as props  */}
+        {/* Passing nav and onclick as props  */}
         <StaticMenu nav={nav} onclick={Toggle} />
         <ScrollNavbar />
       </div>
