@@ -20,6 +20,7 @@ const MobileNavbar = () => {
           <div className="flex justify-between items-center">
             <a href="#">
               <motion.img
+              initial={{ x: 10 }}
                 animate={{ x: -10 }}
                 transition={{ duration: 1, ease: "easeInOut" }}
                 src={Logo}
