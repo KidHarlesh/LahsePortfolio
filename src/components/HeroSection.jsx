@@ -26,7 +26,7 @@ const HeroSection = () => {
     <section className=" relative z-0 lg:pt-16 lg:containers pb-10 lg:pb-0 ">
       <motion.h1
         aria-hidden="true"
-        className="hidden lg:block absolute text-[18em] bottom-[5rem] right-[31rem] text-transparent bg-clip-text opacity-5 -z-10 font-bold"
+        className="hidden lg:block absolute text-[18em] bottom-[3rem] right-[31rem] text-transparent bg-clip-text opacity-5 -z-10 font-bold"
         style={{ WebkitTextStroke: "3px #273291cd" }}
         animate={{ scale: [1, 1.05, 1], opacity: [0.6, 1, 0.6] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}

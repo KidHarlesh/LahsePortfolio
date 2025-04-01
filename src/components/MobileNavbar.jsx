@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 import ScrollNavbar from "./ScrollNavbar";
 import StaticMenu from "./StaticMenu";
+import { useHireMe } from "../components/HireMeContext";
 
 
 const MobileNavbar = () => {
@@ -13,6 +14,8 @@ const MobileNavbar = () => {
   const Toggle = () => {
     setNav(!nav);
   };
+    const { handleWhatsAppClick } = useHireMe();
+  
   return (
     <section>
       <div className="lg:hidden">
@@ -29,7 +32,10 @@ const MobileNavbar = () => {
               />
             </a>
             <div className="flex justify-between items-center gap-8">
-              <button className="border py-4 px-7 rounded-3xl text-lg font-semibold text-white bg-gradient-to-r from-[#000428] to-[#040762] border-[#2137ff]">
+              <button
+                className="border py-4 px-7 rounded-3xl text-lg font-semibold text-white bg-gradient-to-r from-[#000428] to-[#040762] border-[#2137ff]"
+                onClick={handleWhatsAppClick}
+              >
                 Hire Me!
               </button>
               <motion.div

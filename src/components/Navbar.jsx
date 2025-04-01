@@ -4,10 +4,12 @@ import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import logoLash from "../assets/lasheToolsBg.png";
 import { NavContext } from "./NavContext"; // Import the context
+import { useHireMe } from "../components/HireMeContext";
 
 
 const Navbar = ({ onClick }) => {
   const navLinks = useContext(NavContext);
+  const { handleWhatsAppClick } = useHireMe();
 
   return (
     <section className="hidden lg:block container">
@@ -36,8 +38,11 @@ const Navbar = ({ onClick }) => {
               </li>
             ))}
           </ul>
-          <button className=" text-white border px-5 py-2 rounded-2xl bg-gradient-to-l from-[#000428] to-[#040762] text-lg border-[#2137ff] font-semibold">
-            <a href="">Hire Me!</a>
+          <button
+            className="text-white border px-5 py-2 rounded-2xl bg-gradient-to-l from-[#000428] to-[#040762] text-lg border-[#2137ff] font-semibold"
+            onClick={handleWhatsAppClick} 
+          >
+            Hire Me!
           </button>
         </nav>
       </div>

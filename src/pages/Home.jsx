@@ -8,8 +8,8 @@ import HeroSection from "../components/HeroSection";
 // import Contact from "../components/Contact";
 // import Service from "../components/Service";
 import { NavContext } from "../components/NavContext";
+import { HireMeContext } from "../components/HireMeContext"; 
 const Home = () => {
-
   const navLinks = [
     { name: "service", id: "Service" },
     { name: "work", id: "Work" },
@@ -18,14 +18,22 @@ const Home = () => {
     { name: "testimonial", id: "Testimonial" },
     { name: "contact", id: "Contact" },
   ];
+
+
+  const handleWhatsAppClick = () => {
+    window.location.href =
+      "https://wa.me/2347089327276?text=Hello%20I%20want%20to%20hire%20you","_blank"
+  };
+
   return (
-    <NavContext.Provider value={navLinks}>
-      <div>
-        <div className="bg-gradient-to-r from-[#000428] to-[#040762] lg:h-screen ">
-          <MobileNavbar/>
-          <HeroSection />
-        </div>
-        {/* <div>
+    <HireMeContext.Provider value={{ handleWhatsAppClick }}>
+      <NavContext.Provider value={navLinks}>
+        <div>
+          <div className="bg-gradient-to-r from-[#000428] to-[#040762] lg:h-screen ">
+            <MobileNavbar />
+            <HeroSection />
+          </div>
+          {/* <div>
           <Service />
           <Work />
           <Resume />
@@ -33,9 +41,10 @@ const Home = () => {
           <Testimonial />
           <Contact />
         </div> */}
-      </div>
-    </NavContext.Provider>
+        </div>
+      </NavContext.Provider>
+    </HireMeContext.Provider>
   );
-}; 
+};
 
 export default Home;

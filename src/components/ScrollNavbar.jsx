@@ -4,6 +4,7 @@ import { FiAlignRight } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import { motion } from "framer-motion";
 import { NavContext } from "../components/NavContext";
+import { useHireMe } from "../components/HireMeContext";
 
 
 const ScrollNavbar = ({ onClick }) => {
@@ -11,6 +12,8 @@ const ScrollNavbar = ({ onClick }) => {
   const [nav, setNav] = useState(false);
   const [showScrollNav, setShowScrollNav] = useState();
   const lastScrollY = useRef(0); // Using useRef instead of useState
+  const { handleWhatsAppClick } = useHireMe();
+
 
   const Toggle = () => {
     setNav(!nav);
@@ -55,7 +58,10 @@ const ScrollNavbar = ({ onClick }) => {
               />
             </a>
             <div className="flex justify-between items-center gap-8">
-              <button className="border py-4 px-7 rounded-3xl text-lg font-semibold text-white  bg-gradient-to-r from-[#000428] to-[#040762] border-[#200e42]">
+              <button
+                className="border py-4 px-7 rounded-3xl text-lg font-semibold text-white  bg-gradient-to-r from-[#000428] to-[#040762] border-[#200e42]"
+                onClick={handleWhatsAppClick}
+              >
                 Hire Me!
               </button>
               <motion.div
