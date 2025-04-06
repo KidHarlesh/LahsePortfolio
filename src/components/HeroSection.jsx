@@ -23,7 +23,7 @@ const HeroSection = () => {
   }, [index, text]);
 
   return (
-    <section className=" relative z-0 lg:pt-16 lg:containers pb-10 lg:pb-0 ">
+    <section className=" relative z-0 lg:pt-16 lg:containers pb-10 lg:pb-0  text-[#DDDDDD]">
       <motion.h1
         aria-hidden="true"
         className="hidden lg:block absolute text-[18em] bottom-[3rem] right-[31rem] text-transparent bg-clip-text opacity-5 -z-10 font-bold"
@@ -40,7 +40,7 @@ const HeroSection = () => {
               initial={{ y: 0 }}
               animate={{ y: 10 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-2xl  lg:text-4xl font-bold text-[#DDDDDD] "
+              className="text-2xl  lg:text-4xl font-bold  "
             >
               I am Lashe
             </motion.h1>
@@ -56,7 +56,7 @@ const HeroSection = () => {
             </div>
             {/* About Text */}
             <div className="hidden lg:block   ">
-              <p className="text-2xl font-medium text-[#DDDDDD] mt-10 z-10  ">
+              <p className="text-2xl font-medium  mt-10 z-10  ">
                 I create intuitive, responsive, and visually engaging web
                 interfaces that improve user experience and performance.
               </p>
@@ -114,8 +114,8 @@ const HeroSection = () => {
         {/* About Text mobile view only */}
         <div className="lg:hidden">
           <motion.p
-            className="text-xl font-medium text-[#DDDDDD] mt-10"
-            initial={{ y: 50, opacity: 0 }}
+            className="text-xl font-medium mt-10"
+            initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >

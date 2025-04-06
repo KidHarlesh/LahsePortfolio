@@ -1,20 +1,40 @@
-// dexttop view
-
-import React, { useContext } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef, useContext } from "react";
 import logoLash from "../assets/lasheToolsBg.png";
-import { NavContext } from "./NavContext"; // Import the context
+import { motion } from "framer-motion";
+import { NavContext } from "../components/NavContext";
 import { useHireMe } from "../components/HireMeContext";
-import ScrollNavbarDesktop from "./ScrollNavbarDesktop";
 
+const ScrollNavbarDesktop = ({ onClick }) => {
 
-const Navbar = ({ onClick }) => {
   const navLinks = useContext(NavContext);
   const { handleWhatsAppClick } = useHireMe();
+  const [showScrollNav, setShowScrollNav] = useState();
+  const lastScrollY = useRef(0);
+   
+useEffect(()=>{
+    const handleScroll=() =>{
+        const currentScrollY = window.scrollY;
+        if( currentScrollY > lastScrollY.current && currentScrollY > 100){
+            setShowScrollNav(true);
+        } else { setShowScrollNav(false);
+
+        }
+         lastScrollY.current = currentScrollY;
+    };
+        window.addEventListener("scroll", handleScroll);
+          return () => window.removeEventListener("scroll", handleScroll);
+}, []);
 
   return (
     <section className="hidden lg:block container">
-      <div className=" pb-4 pt-4">
+      <motion.div
+        className="fixed top-0 left-0 w-full bg-gradient-to-r from-[#000428] to-[#0b10ba] shadow-lg z-50 py-3 px-6 "
+        initial={{ y: -100, opacity: 0 }}
+        animate={showScrollNav ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
+        transition={{ type: "spring", stiffness: 100, damping: 10 }}
+      >
+
+<div className=" pb-4 pt-4">
         <nav className="flex justify-between items-center">
           <div className="flex items-center gap-14">
             <a href="#">
@@ -47,8 +67,15 @@ const Navbar = ({ onClick }) => {
           </button>
         </nav>
       </div>
-      <ScrollNavbarDesktop/>
+
+
+
+
+
+      </motion.div>
     </section>
   );
+ 
 };
-export default Navbar;
+
+export default ScrollNavbarDesktop

@@ -1,18 +1,13 @@
 import React from "react";
 import MobileNavbar from "../components/MobileNavbar";
-import HeroSection from "../components/HeroSection";
-// import Work from "../components/Work";
-// import Resume from "../components/Resume";
-// import Skills from "../components/Skills";
-// import Testimonial from "../components/Testimonial";
-// import Contact from "../components/Contact";
 
 import { NavContext } from "../components/NavContext";
 import { HireMeContext } from "../components/HireMeContext"; 
 import ServiceMobile from "../components/ServiceMobile";
 
-const Home = () => {
-  const navLinks = [
+
+const ServiceWebDevelopment = () => {
+const navLinks = [
     { name: "Service", id: "Service" },
     { name: "Work", id: "Work" },
     { name: "Resume", id: "Resume" },
@@ -32,25 +27,13 @@ const Home = () => {
       <NavContext.Provider value={navLinks}>
         <div>
           <div className="bg-gradient-to-r from-[#000428] to-[#040762] lg:h-screen ">
-            <MobileNavbar />
-            <HeroSection />
-          </div>
-          <div className="">
-            <ServiceMobile />
+            <MobileNavbar /> 
           </div>
 
-          {/* <div>
-       
-          <Work />
-          <Resume />
-          <Skills />
-          <Testimonial />
-          <Contact />
-        </div> */}
         </div>
       </NavContext.Provider>
     </HireMeContext.Provider>
   );
-};
+}
 
-export default Home;
+export default ServiceWebDevelopment

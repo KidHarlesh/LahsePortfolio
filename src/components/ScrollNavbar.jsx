@@ -7,7 +7,7 @@ import { NavContext } from "../components/NavContext";
 import { useHireMe } from "../components/HireMeContext";
 
 
-const ScrollNavbar = ({ onClick }) => {
+const ScrollNavbar = () => {
   const navLinks = useContext(NavContext);
   const [nav, setNav] = useState(false);
   const [showScrollNav, setShowScrollNav] = useState();
@@ -18,6 +18,8 @@ const ScrollNavbar = ({ onClick }) => {
   const Toggle = () => {
     setNav(!nav);
   };
+
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -36,6 +38,11 @@ const ScrollNavbar = ({ onClick }) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+
+
+
+  
 
   return (
     <section>
@@ -99,7 +106,7 @@ const ScrollNavbar = ({ onClick }) => {
                 {" "}
                 {navLinks.map((link) => (
                   <li key={link.id}>
-                    <a href={`#${link.id}`} onClick={onClick}>
+                    <a href={`#${link.id}`} >
                       {link.name}
                     </a>
                   </li>
