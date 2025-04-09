@@ -1,15 +1,10 @@
 import React from "react";
 import MobileNavbar from "../components/MobileNavbar";
 import HeroSection from "../components/HeroSection";
-// import Work from "../components/Work";
-// import Resume from "../components/Resume";
-// import Skills from "../components/Skills";
-// import Testimonial from "../components/Testimonial";
-// import Contact from "../components/Contact";
-
 import { NavContext } from "../components/NavContext";
 import { HireMeContext } from "../components/HireMeContext"; 
 import ServiceMobile from "../components/ServiceMobile";
+import Work from "../components/Work";
 
 const Home = () => {
   const navLinks = [
@@ -31,22 +26,16 @@ const Home = () => {
     <HireMeContext.Provider value={{ handleWhatsAppClick }}>
       <NavContext.Provider value={navLinks}>
         <div>
-          <div className="bg-gradient-to-r from-[#000428] to-[#040762] lg:h-screen ">
+          <div className="bg-gradient-to-r from-[#000428] to-[#020330] lg:h-screen ">
             <MobileNavbar />
             <HeroSection />
           </div>
           <div className="">
             <ServiceMobile />
           </div>
-
-          {/* <div>
-       
-          <Work />
-          <Resume />
-          <Skills />
-          <Testimonial />
-          <Contact />
-        </div> */}
+          <div>
+            <Work/>
+          </div>
         </div>
       </NavContext.Provider>
     </HireMeContext.Provider>

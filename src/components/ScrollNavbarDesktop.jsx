@@ -28,7 +28,7 @@ useEffect(()=>{
   return (
     <section className="hidden lg:block container">
       <motion.div
-        className="fixed top-0 left-0 w-full bg-gradient-to-r from-[#000428] to-[#0b10ba] shadow-lg z-50 py-3 px-6 "
+        className="fixed top-0 left-0 w-full bg-gradient-to-r from-[#000428] to-[#181c94] shadow-lg z-50 py-3 px-6 "
         initial={{ y: -100, opacity: 0 }}
         animate={showScrollNav ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 10 }}

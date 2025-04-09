@@ -48,7 +48,7 @@ const ScrollNavbar = () => {
     <section>
       {/* Scroll Navbar (Appears when scrolling down) */}
       <motion.div
-        className="fixed top-0 left-0 w-full bg-gradient-to-r from-[#000428] to-[#0b10ba] shadow-lg z-50 py-3 px-6 "
+        className="fixed top-0 left-0 w-full bg-gradient-to-r from-[#000428] to-[#181c94] shadow-lg z-50 py-3 px-6 "
         initial={{ y: -100, opacity: 0 }}
         animate={showScrollNav ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 10 }}
@@ -106,9 +106,7 @@ const ScrollNavbar = () => {
                 {" "}
                 {navLinks.map((link) => (
                   <li key={link.id}>
-                    <a href={`#${link.id}`} >
-                      {link.name}
-                    </a>
+                    <a href={`#${link.id}`}>{link.name}</a>
                   </li>
                 ))}
               </ul>
