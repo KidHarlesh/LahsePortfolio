@@ -59,7 +59,7 @@ const MobileNavbar = () => {
         </div>
         {/* Passing nav and onclick as props  */}
         <StaticMenu nav={nav} onClick={Toggle} />
-        <ScrollNavbar />
+        <ScrollNavbar onClick={Toggle} />
       </div>
       <Navbar />
     </section>

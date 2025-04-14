@@ -7,28 +7,24 @@ import { NavContext } from "../components/NavContext";
 import { useHireMe } from "../components/HireMeContext";
 
 
-const ScrollNavbar = () => {
+const ScrollNavbar = ({ onClick }) => {
   const navLinks = useContext(NavContext);
   const [nav, setNav] = useState(false);
   const [showScrollNav, setShowScrollNav] = useState();
-  const lastScrollY = useRef(0); // Using useRef instead of useState
+  const lastScrollY = useRef(0); 
   const { handleWhatsAppClick } = useHireMe();
-
 
   const Toggle = () => {
     setNav(!nav);
   };
-
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
-        // Show navbar when scrolling down & only after scrolling 100px
         setShowScrollNav(true);
       } else {
-        // Keep it hidden when scrolling up
         setShowScrollNav(false);
       }
 
@@ -39,16 +35,10 @@ const ScrollNavbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
-
-
-  
-
   return (
     <section>
-      {/* Scroll Navbar (Appears when scrolling down) */}
       <motion.div
-        className="fixed top-0 left-0 w-full bg-gradient-to-r from-[#000428] to-[#181c94] shadow-lg z-50 py-3 px-6 "
+        className="fixed top-0 left-0 w-full bg-black shadow-lg z-50 py-3 px-6 "
         initial={{ y: -100, opacity: 0 }}
         animate={showScrollNav ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 10 }}
@@ -106,7 +96,9 @@ const ScrollNavbar = () => {
                 {" "}
                 {navLinks.map((link) => (
                   <li key={link.id}>
-                    <a href={`#${link.id}`}>{link.name}</a>
+                    <a href={`#${link.id}`} onClick={Toggle}>
+                      {link.name}{" "}
+                    </a>
                   </li>
                 ))}
               </ul>

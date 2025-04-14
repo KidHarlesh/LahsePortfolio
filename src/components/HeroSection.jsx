@@ -118,6 +118,7 @@ const HeroSection = () => {
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
+           
           >
             I create intuitive, responsive, and visually engaging web interfaces
             that improve user experience and performance.
@@ -129,6 +130,7 @@ const HeroSection = () => {
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
+              
             >
               Download CV
             </motion.button>
@@ -141,6 +143,7 @@ const HeroSection = () => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
+          
         >
           <a href="https://x.com/harlesh444/" target="_blank">
             <FaXTwitter className="hover:text-[#1DA1F2] transition duration-300 cursor-pointer border rounded-full  p-1 border-[#3347ff] " />

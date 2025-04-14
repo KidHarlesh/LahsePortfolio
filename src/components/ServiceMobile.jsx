@@ -24,6 +24,7 @@ const ServiceMobile = () => {
           initial={{ y: 40, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
           My Quality Service
         </motion.h1>
@@ -33,6 +34,7 @@ const ServiceMobile = () => {
           initial={{ y: 40, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true }}
         >
           Bringing your vision to life with seamless digital experiences that
           blend creativity and functionality to engage your audience.
@@ -44,6 +46,7 @@ const ServiceMobile = () => {
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
           >
             <Link
               to="/servicewebdevelopment"
@@ -83,6 +86,7 @@ const ServiceMobile = () => {
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
           >
             <Link
               to="#"
