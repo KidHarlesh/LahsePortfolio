@@ -2,7 +2,7 @@
 import WebsiteImageTwo from "../assets/picsOne.webp";
 import GameImage from "../assets/gamePicsThree.webp";
 import WebsiteImageOne from "../assets/picsTwo.webp";
-import videoOne from "../assets/video.mov";
+import videoOne from "../assets/Video.mp4";
 
 
 export const AllWorks = [
