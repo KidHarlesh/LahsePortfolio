@@ -49,7 +49,7 @@ const ServiceMobile = () => {
             viewport={{ once: true }}
           >
             <Link
-              to="/servicewebdevelopment"
+              to="#"
               onClick={() => toggleArrow("webDev")}
               onMouseEnter={() => setHoveredLink("webDev")}
               onMouseLeave={() => setHoveredLink(null)}

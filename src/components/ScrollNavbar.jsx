@@ -38,7 +38,11 @@ const ScrollNavbar = ({ onClick }) => {
   return (
     <section>
       <motion.div
-        className="fixed top-0 left-0 w-full bg-black shadow-lg z-50 py-3 px-6 "
+        className={`fixed top-0 left-0 w-full z-50 py-3 px-6 bg-black  transition-shadow duration-500 ${
+          showScrollNav
+            ? "shadow-[0_0_30px_#4f46e5]"
+            : "shadow-none"
+        }`}
         initial={{ y: -100, opacity: 0 }}
         animate={showScrollNav ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
         transition={{ type: "spring", stiffness: 100, damping: 10 }}
