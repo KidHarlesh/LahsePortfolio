@@ -17,7 +17,7 @@ const ServiceMobile = () => {
   };
 
   return (
-    <section className="bg-[rgb(5,7,9)] lg:h-screen " id="Service">
+    <section className="bg-[rgb(5,7,9)] lg:h-screen pt-10 " id="Service">
       <div className="text-[#DDDDDD] containers py-10 lg:pt-20">
         <motion.h1
           className="bg-gradient-to-r from-[#0006ad] to-[#6675ff] text-transparent bg-clip-text text-3xl lg:text-6xl text-center font-extrabold py-5  "

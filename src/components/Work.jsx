@@ -16,7 +16,7 @@ const Work = () => {
       className="bg-gradient-to-r from-[#000428] to-[#020330] text-[#DDDDDD] pb-20"
       id="Work"
     >
-      <div className="containers pt-10">
+      <div className="containers pt-10 pb-10">
         <div>
           <motion.h1
             className="bg-gradient-to-r from-[#0006ad] to-[#6675ff] text-transparent bg-clip-text text-3xl lg:text-6xl text-center font-extrabold py-5"

@@ -5,6 +5,8 @@ import { NavContext } from "../components/NavContext";
 import { HireMeContext } from "../components/HireMeContext"; 
 import ServiceMobile from "../components/ServiceMobile";
 import Work from "../components/Work";
+import Skills from "../components/Skills";
+import { Experience } from "../components/Experience";
 
 const Home = () => {
   const navLinks = [
@@ -35,6 +37,10 @@ const Home = () => {
           </div>
           <div>
             <Work/>
+          </div>
+          <div>
+            <Experience/>
+            <Skills/>
           </div>
         </div>
       </NavContext.Provider>

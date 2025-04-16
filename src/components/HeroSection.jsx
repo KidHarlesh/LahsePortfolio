@@ -23,7 +23,10 @@ const HeroSection = () => {
   }, [index, text]);
 
   return (
-    <section className=" relative z-0 lg:pt-16 lg:containers pb-10 lg:pb-0  text-[#DDDDDD]">
+    <section
+      className=" relative z-0 lg:pt-16 lg:containers pb-10 lg:pb-0  text-[#DDDDDD]"
+      id="Resume"
+    >
       <motion.h1
         aria-hidden="true"
         className="hidden lg:block absolute text-[18em] bottom-[3rem] right-[31rem] text-transparent bg-clip-text opacity-5 -z-10 font-bold"
@@ -138,9 +141,9 @@ const HeroSection = () => {
         <motion.div
           className="flex 
         gap-6 mt-4  text-4xl text-[#5f6bd0] lg:hidden"
-          initial={{ y: 30, opacity: 0 }}
+          initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <a href="https://x.com/harlesh444/" target="_blank">
             <FaXTwitter className="hover:text-[#1DA1F2] transition duration-300 cursor-pointer border rounded-full  p-1 border-[#3347ff] " />
