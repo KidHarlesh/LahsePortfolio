@@ -99,7 +99,7 @@ const HeroSection = () => {
               src={LahseImage}
               alt="Lashe Profile Picture"
               loading="lazy"
-              className="rounded-3xl w-[80%] lg:w-[70%] border border-[#273291cd]"
+              className="shadow-[0_0_10px_#4f46e5] rounded-3xl w-[80%] lg:w-[70%] border border-[#273291cd]"
               initial={{
                 x: window.innerWidth >= 1024 ? 100 : 0,
                 y: window.innerWidth < 1024 ? 100 : 0,

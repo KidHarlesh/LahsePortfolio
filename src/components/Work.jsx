@@ -46,7 +46,7 @@ const Work = () => {
               <button
                 key={cat}
                 className={
-                  category === cat ? "bg-[#020330] rounded-3xl p-2" : ""
+                  category === cat ? "bg-[#6c6eff] rounded-3xl p-2" : ""
                 }
                 onClick={() => setCategory(cat)}
               >
@@ -115,9 +115,7 @@ const Work = () => {
             </motion.div>
           ))}
         </div>
-        <button
-          className="text-white border px-5 py-2 rounded-2xl bg-gradient-to-l from-[#000428] to-[#040762] text-lg border-[#2137ff] font-semibold mt-6 float-end" 
-        >
+        <button className="text-white border px-5 py-2 rounded-2xl bg-gradient-to-l from-[#000428] to-[#040762] text-lg border-[#2137ff] font-semibold mt-6 float-end">
           View more
         </button>
       </div>
