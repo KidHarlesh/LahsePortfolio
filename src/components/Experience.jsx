@@ -7,11 +7,11 @@ export const Experience = () => {
   return (
     <section className="bg-[rgb(5,7,9)] lg:h-screen  ">
       <div className="containers py-24 lg:pt-20 lg:flex gap-20 w-max ">
-        <div className='w-full'>
+        <div className="w-full ">
           <motion.div
-            className="flex items-center gap-5"
-            initial={{ x: -40, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            className="flex items-center gap-5 overflow-hidden"
+            initial={{ y: -40, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
@@ -77,10 +77,14 @@ export const Experience = () => {
             </p>
           </motion.div>
         </div>
-        <div className='w-full'>
+        <div className="w-full">
+
+
+
+
           <motion.div
-            className="flex items-center gap-5 lg:mt-0 mt-5"
-            initial={{ x: 40, opacity: 0 }}
+            className="flex items-center gap-5 lg:mt-0 mt-5 "
+            initial={{ x:-40, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
@@ -90,6 +94,9 @@ export const Experience = () => {
               My Education
             </h1>
           </motion.div>
+
+
+
 
           <motion.div
             className=" p-4 rounded-xl bg-[#020330] hover:bg-[#5141ff] text-[#5141ff] hover:text-[#DDDDDD] border-0 lg:mt-0 mt-8"
