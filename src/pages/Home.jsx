@@ -14,7 +14,6 @@ const Home = () => {
     { name: "Work", id: "Work" },
     { name: "Resume", id: "Resume" },
     { name: "Skills", id: "Skills" },
-    { name: "Testimonial", id: "Testimonial" },
     { name: "Contact", id: "Contact" },
   ];
 

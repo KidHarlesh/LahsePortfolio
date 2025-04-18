@@ -5,7 +5,7 @@ import {AllPics} from "../constant"
 const Skills = () => {
   return (
     <section
-      className="bg-gradient-to-r from-[#000428] to-[#020330] lg:h-screen py-24 lg:pt-24  pt-12 "
+      className="bg-gradient-to-r from-[#000428] to-[#020330]  py-24 lg:pt-24  pt-12 "
       id="Skills"
     >
       <div className="text-[#DDDDDD] containers">

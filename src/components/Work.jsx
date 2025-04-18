@@ -93,7 +93,7 @@ const Work = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
-                  className="absolute bottom-2 bg-[#5141ff]  px-4 h-28 z-10 w-full"
+                  className="absolute bottom-2 bg-[#5141ff]  px-4 h-32 z-10 w-full"
                 >
                   <div className="flex items-center gap-5  py-2 px-2 ">
                     <div>

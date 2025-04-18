@@ -51,7 +51,7 @@ useEffect(()=>{
                 alowoesintoluwalase@gmail.com
               </p>
             </div>
-            <ul className="flex justify-between gap-5 text-lg  text-white font-semibold">
+            <ul className="flex justify-between gap-8 text-lg  text-white font-semibold">
               {navLinks.map((link) => (
                 <li key={link.id}>
                   <a href={`#${link.id}`} onClick={onClick}>

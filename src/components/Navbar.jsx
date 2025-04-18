@@ -30,7 +30,7 @@ const Navbar = ({ onClick }) => {
               alowoesintoluwalase@gmail.com
             </p>
           </div>
-          <ul className="flex justify-between gap-5 text-lg  text-white font-semibold">
+          <ul className="flex justify-between gap-8 text-xl  text-white font-semibold">
             {navLinks.map((link) => (
               <li key={link.id}>
                 <a href={`#${link.id}`} onClick={onClick}>
@@ -41,13 +41,13 @@ const Navbar = ({ onClick }) => {
           </ul>
           <button
             className="text-white border px-5 py-2 rounded-2xl bg-gradient-to-l from-[#000428] to-[#040762] text-lg border-[#2137ff] font-semibold"
-            onClick={handleWhatsAppClick} 
+            onClick={handleWhatsAppClick}
           >
             Hire Me!
           </button>
         </nav>
       </div>
-      <ScrollNavbarDesktop/>
+      <ScrollNavbarDesktop />
     </section>
   );
 };
