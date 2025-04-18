@@ -28,7 +28,7 @@ useEffect(()=>{
   return (
     <section className="hidden lg:block container">
       <motion.div
-        className={`fixed top-0 left-0 w-full z-50 py-3 px-6 bg-black  transition-shadow duration-500 ${
+        className={`fixed top-0 left-0 w-full z-50  px-6 bg-black  transition-shadow duration-500 ${
           showScrollNav ? "shadow-[0_0_30px_#4f46e5]" : "shadow-none"
         }`}
         initial={{ y: -100, opacity: 0 }}

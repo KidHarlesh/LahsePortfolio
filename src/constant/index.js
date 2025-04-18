@@ -3,6 +3,15 @@ import WebsiteImageTwo from "../assets/picsOne.webp";
 import GameImage from "../assets/gamePicsThree.webp";
 import WebsiteImageOne from "../assets/picsTwo.webp";
 import videoOne from "../assets/Video.mp4";
+import FigmaTwo from "../assets/figmaTwo.svg";
+import GithubTwo from "../assets/githubTwo.svg";
+import ReactTwo from "../assets/react.svg";
+import Tailwind from "../assets/TailwindLogo.svg";
+import Html0ne from "../assets/htmlOne.svg";
+import slack from "../assets/slackOne.svg";
+import Css from "../assets/cssOne.svg";
+import JavaScript from "../assets/javascriptThree.svg";
+
 
 
 export const AllWorks = [
@@ -42,5 +51,49 @@ export const AllWorks = [
     desc: "A sleek, responsive site for showcasing photography work.",
     buttonText: "View Site",
     link: "https://photography-portfolio-tc9c.vercel.app/",
+  },
+];
+
+
+export const AllPics = [
+  {
+    id: 1,
+    imageTwo: FigmaTwo,
+    pargaphtext: "50%",
+  },
+  {
+    id: 2,
+    imageTwo: GithubTwo,
+    pargaphtext: "90%",
+  },
+  {
+    id: 3,
+    imageTwo: ReactTwo,
+    pargaphtext: "89%",
+  },
+  {
+    id: 4,
+    imageTwo: Tailwind,
+    pargaphtext: "90%",
+  },
+  {
+    id: 5,
+    imageTwo: Html0ne,
+    pargaphtext: "95%",
+  },
+  {
+    id: 6,
+    imageTwo: slack,
+    pargaphtext: "80%",
+  },
+  {
+    id: 7,
+    imageTwo: Css,
+    pargaphtext: "95%",
+  },
+  {
+    id: 8,
+    imageTwo: JavaScript,
+    pargaphtext: "85%",
   },
 ];

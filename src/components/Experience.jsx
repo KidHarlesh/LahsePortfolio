@@ -10,8 +10,8 @@ export const Experience = () => {
         <div className='w-full'>
           <motion.div
             className="flex items-center gap-5"
-            initial={{ y: -40, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
+            initial={{ x: -40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
