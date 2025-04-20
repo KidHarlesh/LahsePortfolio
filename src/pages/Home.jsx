@@ -7,6 +7,7 @@ import ServiceMobile from "../components/ServiceMobile";
 import Work from "../components/Work";
 import Skills from "../components/Skills";
 import { Experience } from "../components/Experience";
+import Contact from "../components/Contact";
 
 const Home = () => {
   const navLinks = [
@@ -40,6 +41,9 @@ const Home = () => {
           <div>
             <Experience/>
             <Skills/>
+          </div>
+          <div>
+            <Contact/>
           </div>
         </div>
       </NavContext.Provider>

@@ -97,7 +97,9 @@ const Work = () => {
                 >
                   <div className="flex items-center gap-5  py-2 px-2 ">
                     <div>
-                      <h3 className="text-lg font-bold mb-2">{work.title}</h3>
+                      <h3 className="sm:text-base md:text-base lg:text-lg font-bold pb-1 lg:mb-2">
+                        {work.title}
+                      </h3>
                       <p className="text-sm mb-4">{work.desc}</p>
                     </div>
 

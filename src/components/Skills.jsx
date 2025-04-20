@@ -29,16 +29,17 @@ const Skills = () => {
           Bringing your vision to life with seamless digital experiences that
           blend creativity and functionality to engage your audience.
         </motion.p>
-        <div className="flex flex-wrap justify-center gap-2 lg:gap-5 ">
+        <div className="flex flex-wrap justify-center gap-5 lg:gap-5 ">
           {AllPics.map((Pics) => (
-            <div key={Pics.id}>
-              <motion.div
-                className="  py-5 px-14 rounded-3xl w-fit border grayscale hover:grayscale-0 transition duration-500 flex items-center flex-col gap-5 mb-5"
-                initial={{ y: 40, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }}
-              >
+            <motion.div
+              key={Pics.id}
+              className="bg-gradient-to-r from-[#0b0e29] to-[#000833] rounded-3xl  py-5 px-12"
+              initial={{ y: 40, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              <div className="  rounded-3xl w-fit border-0   grayscale hover:grayscale-0 transition duration-500 flex items-center flex-col gap-5  ">
                 <img
                   src={Pics.imageTwo}
                   alt=""
@@ -49,8 +50,8 @@ const Skills = () => {
                   } object-contain`}
                 />
                 <p className="text-2xl font-semibold">{Pics.pargaphtext}</p>
-              </motion.div>
-            </div>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
