@@ -96,7 +96,6 @@ const Contact = () => {
               I create elegant, simple designs and code with passion."
             </motion.p>
           </div>
-
           <form ref={form} onSubmit={sendEmail} className="space-y-4">
             <div className=" lg:flex gap-5">
               <input
@@ -179,3 +178,4 @@ const Contact = () => {
 };
 
 export default Contact;
+// hello
