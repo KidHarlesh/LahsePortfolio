@@ -39,7 +39,7 @@ const Contact = () => {
       <div className="containers lg:grid  lg:grid-cols-2  gap-10 items-center">
         <div className="mb-10 order-2 ">
           <div className="flex items-center gap-5 mb-10">
-            <div className="border rounded-full bg-[#6c6eff] w-fit p-2">
+            <div className="border-0 rounded-full bg-[#6c6eff] w-fit p-2">
               <IoCallOutline className="text-2xl lg:text-4xl " />
             </div>
             <div>
@@ -51,7 +51,7 @@ const Contact = () => {
           </div>
 
           <div className="flex items-center gap-5 mb-10">
-            <div className="border rounded-full bg-[#6c6eff] w-fit p-2">
+            <div className="border-0 rounded-full bg-[#6c6eff] w-fit p-2">
               <FiMail className="text-2xl lg:text-4xl" />
             </div>
             <div>
@@ -63,7 +63,7 @@ const Contact = () => {
           </div>
 
           <div className="flex items-center gap-5">
-            <div className="border rounded-full bg-[#6c6eff] w-fit p-2">
+            <div className="border-0 rounded-full bg-[#6c6eff] w-fit p-2">
               <CiLocationOn className="text-2xl lg:text-4xl" />
             </div>
             <div>
@@ -103,14 +103,14 @@ const Contact = () => {
                 name="first_name"
                 placeholder="First Name"
                 required
-                className="w-full p-2 border rounded mb-5 lg:mb-0  bg-[rgb(8,11,14)] border-[#6c6eff] text-[#ffffff] outline-none"
+                className="w-full p-2 border rounded mb-5 lg:mb-0  bg-[rgb(8,11,14)] border-[#212371] text-[#ffffff] outline-none"
               />
               <input
                 type="text"
                 name="second_name"
                 placeholder="Second Name"
                 required
-                className="w-full p-2 border rounded  bg-[rgb(8,11,14)] border-[#6c6eff] text-[#ffffff] outline-none"
+                className="w-full p-2 border rounded  bg-[rgb(8,11,14)] border-[#212371] text-[#ffffff] outline-none"
               />
             </div>
             <div className="lg:flex gap-5">
@@ -119,30 +119,30 @@ const Contact = () => {
                 name="user_email"
                 placeholder="Your Email"
                 required
-                className="w-full p-2 border rounded mb-5 lg:mb-0  bg-[rgb(8,11,14)] border-[#6c6eff] text-[#ffffff] outline-none"
+                className="w-full p-2 border rounded mb-5 lg:mb-0  bg-[rgb(8,11,14)] border-[#212371] text-[#ffffff] outline-none"
               />
               <input
                 type="number"
                 name="user_phone"
                 placeholder="Your Phone Number"
                 required
-                className="w-full p-2 border rounded  bg-[rgb(8,11,14)] border-[#6c6eff] text-[#ffffff] outline-none"
+                className="w-full p-2 border rounded  bg-[rgb(8,11,14)] border-[#212371] text-[#ffffff] outline-none"
               />
             </div>
 
             <select
               name="service"
               required
-              className="w-full p-2 border rounded bg-[rgb(8,11,14)]  border-[#6c6eff] outline-none"
+              className="w-full p-2 border rounded bg-[rgb(8,11,14)]  border-[#212371] outline-none"
             >
               <option
-                className="bg-[rgb(8,11,14)] border-[#6c6eff]   "
+                className="bg-[rgb(8,11,14)] border-[#212371]   "
                 value="Select Option"
               >
                 Select a service
               </option>
               <option
-                className="bg-[rgb(8,11,14)] border-[#6c6eff]  "
+                className="bg-[rgb(8,11,14)] border-[#212371]  "
                 value="Video Editing"
               >
                 Video Editing
@@ -154,7 +154,7 @@ const Contact = () => {
               rows="4"
               placeholder="Your Message"
               required
-              className="w-full p-2 border rounded bg-[rgb(8,11,14)] border-[#6c6eff] outline-none"
+              className="w-full p-2 border rounded bg-[rgb(8,11,14)] border-[#212371] outline-none"
             ></textarea>
 
             <button

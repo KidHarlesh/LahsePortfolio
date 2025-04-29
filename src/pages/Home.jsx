@@ -8,6 +8,7 @@ import Work from "../components/Work";
 import Skills from "../components/Skills";
 import { Experience } from "../components/Experience";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const navLinks = [
@@ -45,6 +46,7 @@ const Home = () => {
           <div>
             <Contact/>
           </div>
+          <Footer/>
         </div>
       </NavContext.Provider>
     </HireMeContext.Provider>
