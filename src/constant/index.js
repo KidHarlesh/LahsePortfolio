@@ -2,6 +2,7 @@
 import WebsiteImageTwo from "../assets/picsOne.webp";
 import GameImage from "../assets/gamePicsThree.webp";
 import WebsiteImageOne from "../assets/picsTwo.webp";
+import WebsiteImageThree from "../assets/Myportfolio.webp";
 import videoOne from "../assets/Video.mp4";
 import FigmaTwo from "../assets/figmaTwo.svg";
 import GithubTwo from "../assets/githubTwo.svg";
@@ -11,6 +12,10 @@ import Html0ne from "../assets/htmlOne.svg";
 import slack from "../assets/slackOne.svg";
 import Css from "../assets/cssOne.svg";
 import JavaScript from "../assets/javascriptThree.svg";
+import Canva from "../assets/canviee.svg";
+import Capcut from "../assets/capcutLogo.webp";
+
+
 
 
 
@@ -51,6 +56,15 @@ export const AllWorks = [
     desc: "A sleek, responsive site for showcasing photography work.",
     buttonText: "View Site",
     link: "https://photography-portfolio-tc9c.vercel.app/",
+  },
+  {
+    id: 5,
+    image: WebsiteImageThree,
+    category: "website",
+    title: "Lashe portfolio",
+    desc: "A clean, responsive portfolio showcasing development work.",
+    buttonText: "View Site",
+    link: "https://lahse-portfolio.vercel.app/",
   },
 ];
 
@@ -95,5 +109,15 @@ export const AllPics = [
     id: 8,
     imageTwo: JavaScript,
     pargaphtext: "85%",
+  },
+  {
+    id: 9,
+    imageTwo: Capcut,
+    pargaphtext: "95%",
+  },
+  {
+    id: 10,
+    imageTwo: Canva,
+    pargaphtext: "90%",
   },
 ];

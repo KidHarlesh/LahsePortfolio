@@ -39,9 +39,7 @@ const ScrollNavbar = ({ onClick }) => {
     <section>
       <motion.div
         className={`fixed top-0 left-0 w-full z-50 py-3 px-6 bg-black  transition-shadow duration-500 ${
-          showScrollNav
-            ? "shadow-[0_0_30px_#4f46e5]"
-            : "shadow-none"
+          showScrollNav ? "shadow-[0_0_30px_#4f46e5]" : "shadow-none"
         }`}
         initial={{ y: -100, opacity: 0 }}
         animate={showScrollNav ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
@@ -60,7 +58,7 @@ const ScrollNavbar = ({ onClick }) => {
             </a>
             <div className="flex justify-between items-center gap-8">
               <button
-                className="border py-4 px-7 rounded-3xl text-lg font-semibold text-white  bg-gradient-to-r from-[#000428] to-[#040762] border-[#200e42]"
+                className="border py-4 px-7 rounded-3xl text-lg font-semibold text-[#DDDDDD]  bg-gradient-to-r from-[#000428] to-[#040762] border-[#200e42]"
                 onClick={handleWhatsAppClick}
               >
                 Hire Me!
@@ -74,12 +72,12 @@ const ScrollNavbar = ({ onClick }) => {
               >
                 {nav ? (
                   <IoMdClose
-                    className="text-5xl  text-white "
+                    className="text-5xl  text-[#DDDDDD] "
                     onClick={Toggle}
                   />
                 ) : (
                   <FiAlignRight
-                    className="text-5xl text-white "
+                    className="text-5xl text-[#DDDDDD] "
                     onClick={Toggle}
                   />
                 )}
@@ -96,7 +94,7 @@ const ScrollNavbar = ({ onClick }) => {
             className="overflow-hidden absolute top-full left-0 w-full bg-[rgb(50,40,150)]  z-40"
           >
             <nav>
-              <ul className="text-2xl flex flex-col gap-6 text-white font-medium py-5 px-4 h-screen">
+              <ul className="text-2xl flex flex-col gap-6 text-[#DDDDDD] font-medium py-5 px-4 h-screen">
                 {" "}
                 {navLinks.map((link) => (
                   <li key={link.id}>

@@ -44,7 +44,7 @@ const Skills = () => {
                   src={Pics.imageTwo}
                   alt=""
                   className={`${
-                    Pics.id === 4
+                    Pics.id === 4 
                       ? "w-14 h-14 lg:h-20 lg:w-20"
                       : "w-14 lg:w-20 "
                   } object-contain`}

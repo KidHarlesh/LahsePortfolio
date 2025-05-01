@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { NavContext } from "../components/NavContext"; 
 
 const StaticMenu = ({ nav, onClick }) => {
-  const navLinks = useContext(NavContext); // Get navLinks from context
+  const navLinks = useContext(NavContext); 
 
   return (
     <div>
@@ -17,7 +17,7 @@ const StaticMenu = ({ nav, onClick }) => {
         className="overflow-hidden fixed w-full z-50"
       >
         <nav className="bg-[rgb(50,40,150)] h-screen">
-          <ul className="text-2xl flex flex-col gap-6 text-white font-medium py-5 px-4">
+          <ul className="text-2xl flex flex-col gap-6 text-[#DDDDDD] font-medium py-5 px-4">
             {navLinks &&
               navLinks.map((link) => (
                 <li key={link.id}>

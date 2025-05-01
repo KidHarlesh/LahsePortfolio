@@ -33,7 +33,7 @@ const MobileNavbar = () => {
             </a>
             <div className="flex justify-between items-center gap-8">
               <button
-                className="border py-4 px-7 rounded-3xl text-lg font-semibold text-white bg-gradient-to-r from-[#000428] to-[#040762] border-[#2137ff]"
+                className="border py-4 px-7 rounded-3xl text-lg font-semibold text-[#DDDDDD] bg-gradient-to-r from-[#000428] to-[#040762] border-[#2137ff]"
                 onClick={handleWhatsAppClick}
               >
                 Hire Me!
@@ -46,10 +46,13 @@ const MobileNavbar = () => {
                 transition={{ duration: 0.4, ease: "easeInOut" }}
               >
                 {nav ? (
-                  <IoMdClose className="text-5xl text-white" onClick={Toggle} />
+                  <IoMdClose
+                    className="text-5xl text-[#DDDDDD]"
+                    onClick={Toggle}
+                  />
                 ) : (
                   <FiAlignRight
-                    className="text-5xl text-white"
+                    className="text-5xl text-[#DDDDDD]"
                     onClick={Toggle}
                   />
                 )}

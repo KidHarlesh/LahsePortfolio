@@ -47,11 +47,11 @@ useEffect(()=>{
                   className="w-[40px] max-h-[100px]"
                 />
               </a>
-              <p className=" text-white font-semibold text-lg">
+              <p className=" text-[#DDDDDD] font-semibold text-lg">
                 alowoesintoluwalase@gmail.com
               </p>
             </div>
-            <ul className="flex justify-between gap-8 text-lg  text-white font-semibold">
+            <ul className="flex justify-between gap-8 text-lg  text-[#DDDDDD] font-semibold">
               {navLinks.map((link) => (
                 <li key={link.id}>
                   <a href={`#${link.id}`} onClick={onClick}>
