@@ -118,7 +118,7 @@ const Work = () => {
           ))}
         </div>
         <button
-          onClick={() => alert("oh!im working on more project soon! hang on")}
+          onClick={() => alert("View more page is under construction...")}
           className="text-white border px-5 py-2 rounded-2xl bg-gradient-to-l from-[#000428] to-[#040762] text-lg border-[#2137ff] font-semibold mt-6 float-end"
         >
           View more
