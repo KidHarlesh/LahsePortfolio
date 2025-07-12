@@ -3,6 +3,7 @@ import WebsiteImageTwo from "../assets/picsOne.webp";
 import GameImage from "../assets/gamePicsThree.webp";
 import WebsiteImageOne from "../assets/picsTwo.webp";
 import WebsiteImageThree from "../assets/Myportfolio.webp";
+import WebsiteImageFour from "../assets/Chioma-portfolio.webp";
 import videoOne from "../assets/Video.mp4";
 import FigmaTwo from "../assets/figmaTwo.svg";
 import GithubTwo from "../assets/githubTwo.svg";
@@ -65,6 +66,16 @@ export const AllWorks = [
     desc: "A clean, responsive portfolio showcasing development work.",
     buttonText: "View Site",
     link: "https://lahse-portfolio.vercel.app/",
+  },
+
+  {
+    id: 6,
+    image: WebsiteImageFour,
+    category: "website",
+    title: "Chioma Portfolio",
+    desc: "Portfolio website for a content writer. HTML, CSS, and beginner JavaScript.",
+    buttonText: "View Project",
+    link: "https://chioma-portfolio.vercel.app/",
   },
 ];
 

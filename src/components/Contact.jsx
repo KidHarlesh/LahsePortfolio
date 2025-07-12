@@ -35,7 +35,7 @@ const Contact = () => {
     setIsSending(false);
   };
   return (
-    <section className="bg-[rgb(5,7,9)]  text-[#DDDDDD] py-24 lg:pt-24 pt-12">
+    <section className="bg-[rgb(5,7,9)]  text-[#DDDDDD] py-24 lg:pt-24 pt-12 " id="Contact">
       <div className="containers lg:grid  lg:grid-cols-2  gap-10 items-center">
         <div className="mb-10 order-2 ">
           <div className="flex items-center gap-5 mb-10">
