@@ -5,8 +5,8 @@ import { GiGraduateCap } from "react-icons/gi";
 
 export const Experience = () => {
   return (
-    <section className="bg-[rgb(5,7,9)] lg:h-screen  ">
-      <div className="containers py-24 lg:pt-20 lg:flex gap-20 w-max ">
+    <section className="bg-[rgb(5,7,9)]">
+      <div className="containers py-24 lg:pt-20 lg:flex gap-20 w-full">
         <div className="w-full ">
           <motion.div
             className="flex items-center gap-5 overflow-hidden"
@@ -27,6 +27,25 @@ export const Experience = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true }}
           >
+            <p className="text-base font-semibold  hover:text-[#DDDDDD] pb-2 lg:text-lg  ">
+              2025
+            </p>
+            <h1 className="text-[#DDDDDD] text-lg pb-2 font-semibold lg:text-xl ">
+              {" "}
+              GFA Technologies - Remsana{" "}
+              <span className="text-sm lg:text-base">(Hybrid)</span>
+            </h1>
+            <p className="text-[#DDDDDD] text-sm  lg:text-base ">
+              Abeokuta, Ogun State, Nigeria
+            </p>
+          </motion.div>
+          <motion.div
+            className=" p-4 rounded-xl bg-[#020330] hover:bg-[#5141ff] text-[#5141ff] hover:text-[#DDDDDD] border-0 mt-8"
+            initial={{ y: 40, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
             <p className="text-base font-semibold lg:text-lg hover:text-[#DDDDDD] pb-2 ">
               2025
             </p>
@@ -36,7 +55,7 @@ export const Experience = () => {
               <span className="text-sm lg:text-base">(Remote)</span>
             </h1>
             <p className="text-[#DDDDDD] text-sm lg:text-base">
-              Remote,Nigeria
+              Remote, Nigeria
             </p>
           </motion.div>
           <motion.div
@@ -52,10 +71,10 @@ export const Experience = () => {
             <h1 className="text-[#DDDDDD] text-lg pb-2 font-semibold lg:text-xl ">
               {" "}
               Frootify Internship{" "}
-              <span className="text-sm lg:text-base">(hybrid)</span>
+              <span className="text-sm lg:text-base">(Hybrid)</span>
             </h1>
             <p className="text-[#DDDDDD] text-sm  lg:text-base ">
-              Abeokuta,ogun-state Nigeria
+              Abeokuta, Ogun State, Nigeria
             </p>
           </motion.div>
           <motion.div

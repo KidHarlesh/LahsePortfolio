@@ -24,32 +24,32 @@ const HeroSection = () => {
 
   return (
     <section
-      className=" relative z-0 lg:pt-16 lg:containers pb-10 lg:pb-0  text-[#DDDDDD]"
+      className="relative z-0 py-12 lg:py-0 lg:flex lg:items-center lg:min-h-[calc(100vh-80px)] text-[#DDDDDD]"
       id="Resume"
     >
       <motion.h1
         aria-hidden="true"
-        className="hidden lg:block absolute text-[18em] bottom-[3rem] right-[31rem] text-transparent bg-clip-text opacity-5 -z-10 font-bold"
-        style={{ WebkitTextStroke: "3px #273291cd" }}
-        animate={{ scale: [1, 1.05, 1], opacity: [0.6, 1, 0.6] }}
+        className="hidden lg:block absolute text-[15em] top-[15%] left-[40%] -translate-x-1/2 -translate-y-1/2 text-transparent bg-clip-text opacity-5 font-bold pointer-events-none"
+        style={{ WebkitTextStroke: "3px #273291cd", zIndex: 0 }}
+        animate={{ scale: [1, 1.05, 1], opacity: [0.5, 0.8, 0.5] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
       >
         HI
       </motion.h1>
-      <div className="containers mt-8 text-left z-10">
-        <div className="lg:flex">
-          <div className="">
+      <div className="containers text-left z-10 w-full relative">
+        <div className="lg:flex lg:items-center lg:gap-12">
+          <div className="lg:w-1/2">
             <motion.h1
               initial={{ y: 0 }}
               animate={{ y: 10 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-2xl  lg:text-4xl font-bold  "
+              className="text-3xl lg:text-5xl font-bold"
             >
               I am Lashe
             </motion.h1>
-            <div className="min-h-[100px]">
+            <div className="min-h-[100px] lg:min-h-[120px]">
               <motion.p
-                className="bg-gradient-to-r from-[#6675ff] to-[#0006ad] text-transparent bg-clip-text text-[40px] leading-[48px] lg:text-7xl font-extrabold pt-2 lg:pt-4 pb-8"
+                className="bg-gradient-to-r from-[#6675ff] to-[#0006ad] text-transparent bg-clip-text text-[40px] leading-[48px] lg:text-7xl lg:leading-[80px] font-extrabold pt-2 lg:pt-6 pb-6 lg:pb-8"
                 initial={{ y: 0 }}
                 animate={{ y: 10 }}
                 transition={{ duration: 0.4, ease: "easeOut" }}
@@ -58,8 +58,8 @@ const HeroSection = () => {
               </motion.p>
             </div>
             {/* About Text */}
-            <div className="hidden lg:block   ">
-              <p className="text-2xl font-medium  mt-10 z-10  ">
+            <div className="hidden lg:block">
+              <p className="text-xl lg:text-2xl font-medium leading-relaxed mt-6 lg:mt-8 z-10 max-w-2xl">
                 I create intuitive, responsive, and visually engaging web
                 interfaces that improve user experience and performance.
               </p>
@@ -94,12 +94,12 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-center mt-20 z-10 lg:mt-0">
+          <div className="flex justify-center mt-16 lg:mt-0 z-10 lg:w-1/2">
             <motion.img
               src={LahseImage}
               alt="Lashe Profile Picture"
               loading="lazy"
-              className="shadow-[0_0_10px_#4f46e5] rounded-3xl w-[80%] lg:w-[70%] border border-[#273291cd]"
+              className="shadow-[0_0_30px_rgba(79,70,229,0.4)] hover:shadow-[0_0_40px_rgba(79,70,229,0.6)] rounded-3xl w-[85%] lg:w-[65%] max-w-md object-contain border border-[#273291cd] transition-shadow duration-300"
               initial={{
                 x: window.innerWidth >= 1024 ? 100 : 0,
                 y: window.innerWidth < 1024 ? 100 : 0,
@@ -107,7 +107,7 @@ const HeroSection = () => {
                 rotate: 7,
               }}
               animate={{ x: 0, y: 0, opacity: 1, rotate: 7 }}
-              whileHover={{ rotate: 0 }}
+              whileHover={{ rotate: 0, scale: 1.02 }}
               whileTap={{ rotate: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             />

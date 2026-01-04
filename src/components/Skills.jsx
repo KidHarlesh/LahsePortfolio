@@ -39,17 +39,20 @@ const Skills = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <div className="  rounded-3xl w-fit border-0   grayscale hover:grayscale-0 transition duration-500 flex items-center flex-col gap-5  ">
+              <div className="  rounded-3xl w-fit border-0   grayscale hover:grayscale-0 transition duration-500 flex items-center flex-col gap-3  ">
                 <img
                   src={Pics.imageTwo}
-                  alt=""
+                  alt={Pics.skillName || ""}
                   className={`${
                     Pics.id === 4 
                       ? "w-14 h-14 lg:h-20 lg:w-20"
                       : "w-14 lg:w-20 "
                   } object-contain`}
                 />
-                <p className="text-2xl font-semibold">{Pics.pargaphtext}</p>
+                {Pics.skillName && (
+                  <p className="text-sm lg:text-base font-medium text-[#DDDDDD]">{Pics.skillName}</p>
+                )}
+                <p className="text-xl lg:text-2xl font-semibold">{Pics.pargaphtext}</p>
               </div>
             </motion.div>
           ))}

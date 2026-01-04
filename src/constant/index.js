@@ -5,6 +5,10 @@ import WebsiteImageOne from "../assets/picsTwo.webp";
 import WebsiteImageThree from "../assets/Myportfolio.webp";
 import WebsiteImageFour from "../assets/Chioma-portfolio.webp";
 import videoOne from "../assets/Video.mp4";
+import XpandaImage from "../assets/XpandaImage.jpg";
+import MecoyLanding from "../assets/MecoyLandingpage.jpg";
+import MecoyLogin from "../assets/MecoyLogin.jpg";
+import MecoyDashboard from "../assets/MecoyDashboard.jpg";
 import FigmaTwo from "../assets/figmaTwo.svg";
 import GithubTwo from "../assets/githubTwo.svg";
 import ReactTwo from "../assets/react.svg";
@@ -15,6 +19,8 @@ import Css from "../assets/cssOne.svg";
 import JavaScript from "../assets/javascriptThree.svg";
 import Canva from "../assets/canviee.svg";
 import Capcut from "../assets/capcutLogo.webp";
+import Supabase from "../assets/supabaseLogo.svg";
+import Antigravity from "../assets/antigravitylogo.svg";
 
 
 
@@ -77,6 +83,42 @@ export const AllWorks = [
     buttonText: "View Project",
     link: "https://chioma-portfolio.vercel.app/",
   },
+  {
+    id: 7,
+    image: XpandaImage,
+    category: "website",
+    title: "Xpanda",
+    desc: "SME growth platform helping Nigerian businesses thrive through training and support.",
+    buttonText: "View Project",
+    link: "https://xpanda.remsana.com/",
+  },
+  {
+    id: 8,
+    image: MecoyLanding,
+    category: "website",
+    title: "Mecoy Projects",
+    desc: "Construction and engineering firm website showcasing services and portfolio.",
+    buttonText: "View Project",
+    link: "https://mecoyprojects.com/",
+  },
+  {
+    id: 9,
+    image: MecoyLogin,
+    category: "website",
+    title: "Mecoy Admin Login",
+    desc: "Secure authentication portal built with Supabase for admin access.",
+    buttonText: "View Project",
+    link: "https://mecoyproject.com/admin/login.html",
+  },
+  {
+    id: 10,
+    image: MecoyDashboard,
+    category: "website",
+    title: "Mecoy Dashboard",
+    desc: "Admin CMS for managing projects and blog content with Supabase backend.",
+    buttonText: "View Project",
+    link: "",
+  },
 ];
 
 
@@ -84,51 +126,73 @@ export const AllPics = [
   {
     id: 1,
     imageTwo: FigmaTwo,
+    skillName: "Figma",
     pargaphtext: "50%",
   },
   {
     id: 2,
     imageTwo: GithubTwo,
+    skillName: "GitHub",
     pargaphtext: "90%",
   },
   {
     id: 3,
     imageTwo: ReactTwo,
+    skillName: "React",
     pargaphtext: "89%",
   },
   {
     id: 4,
     imageTwo: Tailwind,
+    skillName: "Tailwind CSS",
     pargaphtext: "90%",
   },
   {
     id: 5,
     imageTwo: Html0ne,
+    skillName: "HTML",
     pargaphtext: "95%",
   },
   {
     id: 6,
     imageTwo: slack,
+    skillName: "Slack",
     pargaphtext: "80%",
   },
   {
     id: 7,
     imageTwo: Css,
+    skillName: "CSS",
     pargaphtext: "95%",
   },
   {
     id: 8,
     imageTwo: JavaScript,
+    skillName: "JavaScript",
     pargaphtext: "85%",
   },
   {
     id: 9,
     imageTwo: Capcut,
+    skillName: "CapCut",
     pargaphtext: "95%",
   },
   {
     id: 10,
     imageTwo: Canva,
+    skillName: "Canva",
     pargaphtext: "90%",
+  },
+  {
+    id: 11,
+    imageTwo: Supabase, // Placeholder - replace with Supabase logo
+    skillName: "Supabase",
+    pargaphtext: "85%",
+  },
+  {
+    id: 12,
+    imageTwo: Antigravity, // Placeholder - replace with Antigravity logo
+    skillName: "Antigravity",
+    pargaphtext: "80%",
   },
 ];

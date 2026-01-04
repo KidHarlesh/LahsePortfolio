@@ -29,7 +29,7 @@ const Home = () => {
     <HireMeContext.Provider value={{ handleWhatsAppClick }}>
       <NavContext.Provider value={navLinks}>
         <div>
-          <div className="bg-gradient-to-r from-[#000428] to-[#020330] lg:h-screen ">
+          <div className="bg-gradient-to-r from-[#000428] to-[#020330] min-h-screen flex flex-col">
             <MobileNavbar />
             <HeroSection />
           </div>
