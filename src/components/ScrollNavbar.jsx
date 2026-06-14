@@ -1,17 +1,18 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
-import Logo from "../assets/lasheToolsBg.png";
-import { FiAlignRight } from "react-icons/fi";
+import Logo from "../assets/LasheImageHeroRemovebgA.webp";
+import { FiAlignRight, FiSun, FiMoon } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import { motion } from "framer-motion";
 import { NavContext } from "../components/NavContext";
+import { ThemeContext } from "./ThemeContext";
 import { useHireMe } from "../components/HireMeContext";
-
 
 const ScrollNavbar = ({ onClick }) => {
   const navLinks = useContext(NavContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const [nav, setNav] = useState(false);
-  const [showScrollNav, setShowScrollNav] = useState();
-  const lastScrollY = useRef(0); 
+  const [showScrollNav, setShowScrollNav] = useState(false);
+  const lastScrollY = useRef(0);
   const { handleWhatsAppClick } = useHireMe();
 
   const Toggle = () => {
@@ -21,92 +22,83 @@ const ScrollNavbar = ({ onClick }) => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+      // Show sticky nav only when scrolling UP
+      if (currentScrollY < lastScrollY.current && currentScrollY > 100) {
         setShowScrollNav(true);
       } else {
         setShowScrollNav(false);
       }
-
       lastScrollY.current = currentScrollY;
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <section>
+    <section className="lg:hidden">
       <motion.div
-        className={`fixed top-0 left-0 w-full z-50 py-3 px-6 bg-black  transition-shadow duration-500 ${
-          showScrollNav ? "shadow-[0_0_30px_#4f46e5]" : "shadow-none"
-        }`}
+        className="fixed top-0 left-0 w-full z-50 py-3 px-5 bg-white dark:bg-zinc-950 border-b border-slate-200 dark:border-zinc-800 shadow-sm"
         initial={{ y: -100, opacity: 0 }}
         animate={showScrollNav ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }}
-        transition={{ type: "spring", stiffness: 100, damping: 10 }}
+        transition={{ type: "spring", stiffness: 120, damping: 18 }}
       >
-        <div className=" ">
-          <div className=" flex justify-between items-center">
-            <a href="#">
-              <motion.img
-                animate={{ x: -10 }}
-                transition={{ duration: 1, ease: "easeInOut" }}
-                src={Logo}
-                alt=""
-                className="w-[44px] max-h-[92px] "
-              />
-            </a>
-            <div className="flex justify-between items-center gap-8">
-              <button
-                className="border py-4 px-7 rounded-3xl text-lg font-semibold text-[#DDDDDD]  bg-gradient-to-r from-[#000428] to-[#040762] border-[#200e42]"
-                onClick={handleWhatsAppClick}
-              >
-                Hire Me!
-              </button>
-              <motion.div
-                className="cursor-pointer"
-                onClick={Toggle}
-                initial={{ rotate: 0, opacity: 1 }}
-                animate={{ rotate: nav ? 90 : 0, opacity: 3 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
-              >
-                {nav ? (
-                  <IoMdClose
-                    className="text-5xl  text-[#DDDDDD] "
-                    onClick={Toggle}
-                  />
-                ) : (
-                  <FiAlignRight
-                    className="text-5xl text-[#DDDDDD] "
-                    onClick={Toggle}
-                  />
-                )}
-              </motion.div>
-            </div>
+        <div className="flex justify-between items-center">
+          <a href="#">
+            <img src={Logo} alt="Lashe logo" className="w-10 h-10 rounded-full object-cover object-top border border-slate-200 dark:border-zinc-800" />
+          </a>
+          <div className="flex items-center gap-4">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-zinc-800 transition-colors text-slate-700 dark:text-slate-100"
+              aria-label="Toggle Dark Mode"
+            >
+              {theme === "light" ? <FiMoon size={20} /> : <FiSun size={20} />}
+            </button>
+            <button
+              className="bg-blue-600 text-white py-2 px-5 rounded-3xl text-sm font-semibold hover:bg-blue-700 transition-all duration-300"
+              onClick={handleWhatsAppClick}
+            >
+              Hire Me!
+            </button>
+            <motion.div
+              className="cursor-pointer"
+              onClick={Toggle}
+              animate={{ rotate: nav ? 90 : 0 }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            >
+              {nav ? (
+                <IoMdClose className="text-3xl text-slate-700 dark:text-slate-100" />
+              ) : (
+                <FiAlignRight className="text-3xl text-slate-700 dark:text-slate-100" />
+              )}
+            </motion.div>
           </div>
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={
-              nav ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }
-            }
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden absolute top-full left-0 w-full bg-[rgb(50,40,150)]  z-40"
-          >
-            <nav>
-              <ul className="text-2xl flex flex-col gap-6 text-[#DDDDDD] font-medium py-5 px-4 h-screen">
-                {" "}
-                {navLinks.map((link) => (
-                  <li key={link.id}>
-                    <a href={`#${link.id}`} onClick={Toggle}>
-                      {link.name}{" "}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </motion.div>
         </div>
+
+        {/* Dropdown menu */}
+        <motion.div
+          initial={{ height: 0, opacity: 0 }}
+          animate={nav ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="overflow-hidden"
+        >
+          <nav>
+            <ul className="text-xl flex flex-col gap-5 text-slate-700 dark:text-slate-100 font-medium py-5 px-2">
+              {navLinks.map((link) => (
+                <li key={link.id}>
+                  <a
+                    href={`#${link.id}`}
+                    onClick={() => { Toggle(); }}
+                    className="hover:text-blue-600 transition-colors duration-200 block"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </motion.div>
       </motion.div>
     </section>
   );

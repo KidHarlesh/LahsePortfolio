@@ -1,39 +1,45 @@
 import React, { useState, useContext } from "react";
-import Logo from "../assets/lasheToolsBg.png";
-import { FiAlignRight } from "react-icons/fi";
+import Logo from "../assets/LasheImageHeroRemovebgA.webp";
+import { FiAlignRight, FiSun, FiMoon } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import Navbar from "../components/Navbar";
 import { motion } from "framer-motion";
 import ScrollNavbar from "./ScrollNavbar";
 import StaticMenu from "./StaticMenu";
 import { useHireMe } from "../components/HireMeContext";
-
+import { ThemeContext } from "./ThemeContext";
 
 const MobileNavbar = () => {
   const [nav, setNav] = useState(false);
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const Toggle = () => {
     setNav(!nav);
   };
-    const { handleWhatsAppClick } = useHireMe();
-  
+  const { handleWhatsAppClick } = useHireMe();
+
   return (
     <section>
+      {/* Mobile top bar */}
       <div className="lg:hidden">
         <div className="container p-5">
           <div className="flex justify-between items-center">
             <a href="#">
-              <motion.img
-                initial={{ x: 10 }}
-                animate={{ x: -10 }}
-                transition={{ duration: 1, ease: "easeInOut" }}
+              <img
                 src={Logo}
-                alt="logo"
-                className="w-[44px] max-h-[92px]"
+                alt="Lashe logo"
+                className="w-12 h-12 rounded-full object-cover object-top border-2 border-slate-200 dark:border-zinc-800"
               />
             </a>
-            <div className="flex justify-between items-center gap-8">
+            <div className="flex items-center gap-4">
               <button
-                className="border py-4 px-7 rounded-3xl text-lg font-semibold text-[#DDDDDD] bg-gradient-to-r from-[#000428] to-[#040762] border-[#2137ff]"
+                onClick={toggleTheme}
+                className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-zinc-800 transition-colors text-slate-700 dark:text-slate-100"
+                aria-label="Toggle Dark Mode"
+              >
+                {theme === "light" ? <FiMoon size={20} /> : <FiSun size={20} />}
+              </button>
+              <button
+                className="bg-blue-600 text-white py-2.5 px-6 rounded-3xl text-base font-semibold hover:bg-blue-700 transition-all duration-300 shadow-sm"
                 onClick={handleWhatsAppClick}
               >
                 Hire Me!
@@ -41,26 +47,18 @@ const MobileNavbar = () => {
               <motion.div
                 className="cursor-pointer"
                 onClick={Toggle}
-                initial={{ rotate: 0, opacity: 1 }}
-                animate={{ rotate: nav ? 90 : 0, opacity: 3 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
+                animate={{ rotate: nav ? 90 : 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
               >
                 {nav ? (
-                  <IoMdClose
-                    className="text-5xl text-[#DDDDDD]"
-                    onClick={Toggle}
-                  />
+                  <IoMdClose className="text-4xl text-slate-700" />
                 ) : (
-                  <FiAlignRight
-                    className="text-5xl text-[#DDDDDD]"
-                    onClick={Toggle}
-                  />
+                  <FiAlignRight className="text-4xl text-slate-700" />
                 )}
               </motion.div>
             </div>
           </div>
         </div>
-        {/* Passing nav and onclick as props  */}
         <StaticMenu nav={nav} onClick={Toggle} />
         <ScrollNavbar onClick={Toggle} />
       </div>

@@ -14,10 +14,11 @@ const Home = () => {
   const navLinks = [
     { name: "Service", id: "Service" },
     { name: "Work", id: "Work" },
-    { name: "Resume", id: "Resume" },
+    { name: "Experience", id: "Experience" },
     { name: "Skills", id: "Skills" },
     { name: "Contact", id: "Contact" },
   ];
+
 
 
   const handleWhatsAppClick = () => {
@@ -29,7 +30,7 @@ const Home = () => {
     <HireMeContext.Provider value={{ handleWhatsAppClick }}>
       <NavContext.Provider value={navLinks}>
         <div>
-          <div className="bg-gradient-to-r from-[#000428] to-[#020330] min-h-screen flex flex-col">
+          <div className="min-h-screen flex flex-col">
             <MobileNavbar />
             <HeroSection />
           </div>

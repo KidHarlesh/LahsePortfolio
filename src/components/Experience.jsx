@@ -1,162 +1,108 @@
-import React from 'react'
+import React from "react";
 import { LiaCertificateSolid } from "react-icons/lia";
 import { motion } from "framer-motion";
 import { GiGraduateCap } from "react-icons/gi";
 
+const ExperienceCard = ({ year, title, subtitle, location, delay = 0 }) => (
+  <motion.div
+    className="p-6 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-blue-300 dark:hover:border-blue-500 hover:shadow-md transition-all duration-300 mt-5 group"
+    initial={{ y: 40, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    transition={{ duration: 0.6, ease: "easeOut", delay }}
+    viewport={{ once: true }}
+  >
+    <p className="text-sm font-bold text-blue-600 dark:text-blue-400 pb-2 uppercase tracking-wide">{year}</p>
+    <h3 className="text-slate-900 dark:text-slate-50 text-lg lg:text-xl font-bold pb-1 group-hover:text-blue-700 dark:group-hover:text-blue-400 transition-colors">
+      {title}{" "}
+      {subtitle && <span className="text-slate-500 dark:text-slate-200 text-sm font-medium ml-1">{subtitle}</span>}
+    </h3>
+    <p className="text-slate-600 dark:text-slate-200 text-sm font-medium mt-1">{location}</p>
+  </motion.div>
+);
+
 export const Experience = () => {
   return (
-    <section className="bg-[rgb(5,7,9)]">
-      <div className="containers py-24 lg:pt-20 lg:flex gap-20 w-full">
-        <div className="w-full ">
-          <motion.div
-            className="flex items-center gap-5 overflow-hidden"
-            initial={{ y: -40, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            <LiaCertificateSolid className="text-[#6675ff] text-5xl" />
-            <h1 className="bg-gradient-to-r from-[#6675ff] to-[#0006ad] text-transparent bg-clip-text text-4xl lg:text-5xl text-center font-extrabold py-5">
-              Experience
-            </h1>
-          </motion.div>
-          <motion.div
-            className=" p-4 rounded-xl bg-[#020330] hover:bg-[#5141ff] text-[#5141ff] hover:text-[#DDDDDD] border-0"
-            initial={{ y: -40, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            <p className="text-base font-semibold  hover:text-[#DDDDDD] pb-2 lg:text-lg  ">
-              2025
-            </p>
-            <h1 className="text-[#DDDDDD] text-lg pb-2 font-semibold lg:text-xl ">
-              {" "}
-              GFA Technologies - Remsana{" "}
-              <span className="text-sm lg:text-base">(Hybrid)</span>
-            </h1>
-            <p className="text-[#DDDDDD] text-sm  lg:text-base ">
-              Abeokuta, Ogun State, Nigeria
-            </p>
-          </motion.div>
-          <motion.div
-            className=" p-4 rounded-xl bg-[#020330] hover:bg-[#5141ff] text-[#5141ff] hover:text-[#DDDDDD] border-0 mt-8"
-            initial={{ y: 40, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            <p className="text-base font-semibold lg:text-lg hover:text-[#DDDDDD] pb-2 ">
-              2025
-            </p>
-            <h1 className="text-[#DDDDDD] text-lg lg:text-xl pb-2 font-semibold ">
-              {" "}
-              HNG Internship{" "}
-              <span className="text-sm lg:text-base">(Remote)</span>
-            </h1>
-            <p className="text-[#DDDDDD] text-sm lg:text-base">
-              Remote, Nigeria
-            </p>
-          </motion.div>
-          <motion.div
-            className=" p-4 rounded-xl bg-[#020330] hover:bg-[#5141ff] text-[#5141ff] hover:text-[#DDDDDD] border-0 mt-8"
-            initial={{ y: 40, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            <p className="text-base font-semibold  hover:text-[#DDDDDD] pb-2 lg:text-lg  ">
-              2024 - 2025
-            </p>
-            <h1 className="text-[#DDDDDD] text-lg pb-2 font-semibold lg:text-xl ">
-              {" "}
-              Frootify Internship{" "}
-              <span className="text-sm lg:text-base">(Hybrid)</span>
-            </h1>
-            <p className="text-[#DDDDDD] text-sm  lg:text-base ">
-              Abeokuta, Ogun State, Nigeria
-            </p>
-          </motion.div>
-          <motion.div
-            className=" p-4 rounded-xl bg-[#020330] hover:bg-[#5141ff] text-[#5141ff] hover:text-[#DDDDDD] border-0 mt-8 "
-            initial={{ y: -40, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            <p className="text-base font-semibold  hover:text-[#DDDDDD] pb-2  lg:text-lg">
-              2024 - 2025
-            </p>
-            <h1 className="text-[#DDDDDD] text-lg lg:text-xl pb-2 font-semibold ">
-              TECH-ZONE ACADEMY
-              <span className="text-sm lg:text-base"> (hybrid)</span>
-            </h1>
-            <p className="text-[#DDDDDD] text-sm  lg:text-base">
-              Abeokuta, Ogun State, Nigeria
-            </p>
-          </motion.div>
-        </div>
+    <section className="bg-slate-50 dark:bg-zinc-950" id="Experience">
+      <div className="container py-12 lg:py-24 lg:flex lg:gap-16 w-full">
+        {/* Experience column */}
         <div className="w-full">
-
-
-
-
           <motion.div
-            className="flex items-center gap-5 lg:mt-0 mt-5 "
-            initial={{ x:-40, opacity: 0 }}
+            className="flex items-center gap-4 overflow-hidden mb-6"
+            initial={{ y: -40, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-xl flex-shrink-0">
+               <LiaCertificateSolid className="text-blue-600 dark:text-blue-400 text-4xl" />
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-slate-50">
+              Experience
+            </h2>
+          </motion.div>
+
+          <ExperienceCard
+            year="2025"
+            title="GFA Technologies – Remsana"
+            subtitle="(Hybrid)"
+            location="Abeokuta, Ogun State, Nigeria"
+            delay={0}
+          />
+          <ExperienceCard
+            year="2025"
+            title="HNG Internship"
+            subtitle="(Remote)"
+            location="Remote, Nigeria"
+            delay={0.1}
+          />
+          <ExperienceCard
+            year="2024 – 2025"
+            title="Frootify Internship"
+            subtitle="(Hybrid)"
+            location="Abeokuta, Ogun State, Nigeria"
+            delay={0.2}
+          />
+          <ExperienceCard
+            year="2024 – 2025"
+            title="Tech-Zone Academy"
+            subtitle="(Hybrid)"
+            location="Abeokuta, Ogun State, Nigeria"
+            delay={0.3}
+          />
+        </div>
+
+        {/* Education column */}
+        <div className="w-full mt-16 lg:mt-0">
+          <motion.div
+            className="flex items-center gap-4 mb-6"
+            initial={{ x: -40, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
           >
-            <GiGraduateCap className="text-[#6675ff] text-5xl" />
-            <h1 className="bg-gradient-to-r from-[#6675ff] to-[#0006ad] text-transparent bg-clip-text text-4xl lg:text-5xl text-center font-extrabold py-5">
-              My Education
-            </h1>
+            <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-xl flex-shrink-0">
+               <GiGraduateCap className="text-blue-600 dark:text-blue-400 text-4xl" />
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-slate-50">
+              Education
+            </h2>
           </motion.div>
 
-
-
-
-          <motion.div
-            className=" p-4 rounded-xl bg-[#020330] hover:bg-[#5141ff] text-[#5141ff] hover:text-[#DDDDDD] border-0 lg:mt-0 mt-8"
-            initial={{ y: -40, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            <p className="text-base font-semibold lg:text-lg   hover:text-[#DDDDDD] pb-2 ">
-              2018 - 2022
-            </p>
-            <h1 className="text-[#DDDDDD] lg:text-xl text-lg pb-2 font-semibold ">
-              Federal University of Oye-Ekiti, Ekiti State
-            </h1>
-            <p className="text-[#DDDDDD] text-sm  lg:text-base">
-              Oye-Ekiti, Ekiti-State, Nigeria.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className=" p-4 rounded-xl bg-[#020330] hover:bg-[#5141ff] text-[#5141ff] hover:text-[#DDDDDD] border-0 mt-8"
-            initial={{ y: -40, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            <p className="text-base font-semibold lg:text-lg  hover:text-[#DDDDDD] pb-2 ">
-              2024
-            </p>
-            <h1 className="text-[#DDDDDD] text-lg pb-2 lg:text-xlfont-semibold ">
-              Tech-Zone Academy{" "}
-              <span className="text-sm lg:text-base">
-                ( Front-End Development Certification)
-              </span>{" "}
-            </h1>
-            <p className="text-[#DDDDDD] text-sm lg:text-base ">
-              Abeokuta, Ogun State, Nigeria
-            </p>
-          </motion.div>
+          <ExperienceCard
+            year="2018 – 2022"
+            title="Federal University of Oye-Ekiti"
+            location="Oye-Ekiti, Ekiti State, Nigeria"
+            delay={0}
+          />
+          <ExperienceCard
+            year="2024"
+            title="Tech-Zone Academy"
+            subtitle="(Front-End Development Certification)"
+            location="Abeokuta, Ogun State, Nigeria"
+            delay={0.1}
+          />
         </div>
       </div>
     </section>
   );
-}
+};

@@ -1,8 +1,8 @@
 
-import WebsiteImageTwo from "../assets/picsOne.webp";
+import WebsiteImageTwo from "../assets/blacky.png";
 import GameImage from "../assets/gamePicsThree.webp";
-import WebsiteImageOne from "../assets/picsTwo.webp";
-import WebsiteImageThree from "../assets/Myportfolio.webp";
+import WebsiteImageOne from "../assets/XAPnda.png";
+import WebsiteImageThree from "../assets/rbbbb.png";
 import WebsiteImageFour from "../assets/Chioma-portfolio.webp";
 import videoOne from "../assets/Video.mp4";
 import XpandaImage from "../assets/XpandaImage.jpg";
@@ -28,35 +28,27 @@ import Antigravity from "../assets/antigravitylogo.svg";
 
 export const AllWorks = [
   {
-    id: 1,
-    image: WebsiteImageOne,
+     id: 1,
+    image: MecoyLanding,
     category: "website",
-    title: "Edulah",
-    desc: "Built as a hands-on project to explore HTML, CSS, and beginner JavaScript.",
+    title: "Mecoy Projects",
+    desc: "Construction and engineering firm website showcasing services and portfolio.",
     buttonText: "View Project",
-    link: "https://first-project-six-gamma.vercel.app/",
+    link: "https://mecoyprojects.com/",
+ 
   },
 
   {
-    id: 2,
-    video: videoOne,
-    category: "video",
-    title: "Promo Video",
-    desc: "A 22s commercial created for the EasyX app to highlight its features and value.",
-    buttonText: "Watch Now",
-    link: "https://www.instagram.com/reel/DH9Qrbxu441/?igsh=MW54bHRkbnpsMW9wcg==",
+       id: 2,
+    image: WebsiteImageOne,
+    category: "website",
+    title: "Xpanda",
+    desc: "SME growth platform helping Nigerian businesses thrive through training and support.",
+    buttonText: "View Project",
+    link: "https://xpanda.remsana.com/", 
   },
   {
     id: 3,
-    image: GameImage,
-    category: "game",
-    title: "HNG Color Game",
-    desc: "A quick, fun game to guess the correct color.",
-    buttonText: "Play Game",
-    link: "https://colorgame-hng.vercel.app/",
-  },
-  {
-    id: 4,
     image: WebsiteImageTwo,
     category: "website",
     title: "Photography Website",
@@ -65,44 +57,18 @@ export const AllWorks = [
     link: "https://photography-portfolio-tc9c.vercel.app/",
   },
   {
-    id: 5,
+    id: 4,
     image: WebsiteImageThree,
     category: "website",
-    title: "Lashe portfolio",
-    desc: "A clean, responsive portfolio showcasing development work.",
+    title: "Remsana Business Builder",
+    desc: "Remsana is a technology-driven platform helping African SMEs start, grow, and scale sustainable businesses.",
     buttonText: "View Site",
-    link: "https://lahse-portfolio.vercel.app/",
+    link: "https://remsana.com",
   },
 
   {
-    id: 6,
-    image: WebsiteImageFour,
-    category: "website",
-    title: "Chioma Portfolio",
-    desc: "Portfolio website for a content writer. HTML, CSS, and beginner JavaScript.",
-    buttonText: "View Project",
-    link: "https://chioma-portfolio.vercel.app/",
-  },
-  {
-    id: 7,
-    image: XpandaImage,
-    category: "website",
-    title: "Xpanda",
-    desc: "SME growth platform helping Nigerian businesses thrive through training and support.",
-    buttonText: "View Project",
-    link: "https://xpanda.remsana.com/",
-  },
-  {
-    id: 8,
-    image: MecoyLanding,
-    category: "website",
-    title: "Mecoy Projects",
-    desc: "Construction and engineering firm website showcasing services and portfolio.",
-    buttonText: "View Project",
-    link: "https://mecoyprojects.com/",
-  },
-  {
-    id: 9,
+
+       id: 5,
     image: MecoyLogin,
     category: "website",
     title: "Mecoy Admin Login",
@@ -111,13 +77,45 @@ export const AllWorks = [
     link: "https://mecoyproject.com/admin/login.html",
   },
   {
-    id: 10,
+      id: 8,
+    image: WebsiteImageFour,
+    category: "website",
+    title: "Chioma Portfolio",
+    desc: "Portfolio website for a content writer. HTML, CSS, and beginner JavaScript.",
+    buttonText: "View Project",
+    link: "https://chioma-portfolio.vercel.app/",
+  },
+  {
+     id: 7,
     image: MecoyDashboard,
     category: "website",
     title: "Mecoy Dashboard",
     desc: "Admin CMS for managing projects and blog content with Supabase backend.",
     buttonText: "View Project",
     link: "",
+    
+   
+  },
+  {
+     id: 6,
+    video: videoOne,
+    category: "video",
+    title: "Promo Video",
+    desc: "A 22s commercial created for the EasyX app to highlight its features and value.",
+    buttonText: "Watch Now",
+    link: "https://www.instagram.com/reel/DH9Qrbxu441/?igsh=MW54bHRkbnpsMW9wcg==",
+  
+ 
+  },
+  {
+  
+     id: 9,
+    image: GameImage,
+    category: "game",
+    title: "HNG Color Game",
+    desc: "A quick, fun game to guess the correct color.",
+    buttonText: "Play Game",
+    link: "https://colorgame-hng.vercel.app/",
   },
 ];
 
@@ -127,72 +125,60 @@ export const AllPics = [
     id: 1,
     imageTwo: FigmaTwo,
     skillName: "Figma",
-    pargaphtext: "50%",
   },
   {
     id: 2,
     imageTwo: GithubTwo,
     skillName: "GitHub",
-    pargaphtext: "90%",
   },
   {
     id: 3,
     imageTwo: ReactTwo,
     skillName: "React",
-    pargaphtext: "89%",
   },
   {
     id: 4,
     imageTwo: Tailwind,
     skillName: "Tailwind CSS",
-    pargaphtext: "90%",
   },
   {
     id: 5,
     imageTwo: Html0ne,
     skillName: "HTML",
-    pargaphtext: "95%",
   },
   {
     id: 6,
     imageTwo: slack,
     skillName: "Slack",
-    pargaphtext: "80%",
   },
   {
     id: 7,
     imageTwo: Css,
     skillName: "CSS",
-    pargaphtext: "95%",
   },
   {
     id: 8,
     imageTwo: JavaScript,
     skillName: "JavaScript",
-    pargaphtext: "85%",
   },
   {
     id: 9,
     imageTwo: Capcut,
     skillName: "CapCut",
-    pargaphtext: "95%",
   },
   {
     id: 10,
     imageTwo: Canva,
     skillName: "Canva",
-    pargaphtext: "90%",
   },
   {
     id: 11,
     imageTwo: Supabase, // Placeholder - replace with Supabase logo
     skillName: "Supabase",
-    pargaphtext: "85%",
   },
   {
     id: 12,
     imageTwo: Antigravity, // Placeholder - replace with Antigravity logo
     skillName: "Antigravity",
-    pargaphtext: "80%",
   },
 ];

@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react";
 import { motion } from "framer-motion";
-import {AllPics} from "../constant"
+import { AllPics } from "../constant";
 
 const Skills = () => {
   return (
     <section
-      className="bg-gradient-to-r from-[#000428] to-[#020330]  py-24 lg:pt-24  pt-12 "
+      className="bg-white dark:bg-zinc-950 py-12 lg:py-24 border-b border-slate-100 dark:border-zinc-800"
       id="Skills"
     >
-      <div className="text-[#DDDDDD] containers">
+      <div className="text-slate-900 dark:text-slate-50 containers">
         <motion.h1
-          className="bg-gradient-to-r from-[#6675ff] to-[#0006ad] text-transparent bg-clip-text text-3xl lg:text-6xl text-center font-extrabold py-5  "
+          className="text-3xl md:text-5xl lg:text-6xl text-center font-extrabold py-5 text-slate-900 dark:text-slate-50"
           initial={{ y: 40, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -20,46 +20,45 @@ const Skills = () => {
         </motion.h1>
 
         <motion.p
-          className="text-center text-base lg:text-lg font-semibold  pb-10 lg:pb-24 lg:px-60  "
+          className="text-center text-base lg:text-lg font-normal text-slate-600 dark:text-slate-200 pb-12 lg:pb-20 lg:px-60"
           initial={{ y: 40, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
-          Bringing your vision to life with seamless digital experiences that
-          blend creativity and functionality to engage your audience.
+          The tools and technologies I use to build and ship quality work.
         </motion.p>
-        <div className="flex flex-wrap justify-center gap-5 lg:gap-5 ">
+
+        <div className="flex flex-wrap justify-center gap-4 lg:gap-5">
           {AllPics.map((Pics) => (
             <motion.div
               key={Pics.id}
-              className="bg-gradient-to-r from-[#0b0e29] to-[#000833] rounded-3xl  py-5 px-12"
+              className="bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 hover:border-blue-300 dark:hover:border-blue-500 shadow-sm hover:shadow-md rounded-2xl py-6 px-8 flex flex-col items-center gap-4 transition-all duration-300 hover:-translate-y-1 cursor-default"
               initial={{ y: 40, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
               viewport={{ once: true }}
             >
-              <div className="  rounded-3xl w-fit border-0   grayscale hover:grayscale-0 transition duration-500 flex items-center flex-col gap-3  ">
-                <img
-                  src={Pics.imageTwo}
-                  alt={Pics.skillName || ""}
-                  className={`${
-                    Pics.id === 4 
-                      ? "w-14 h-14 lg:h-20 lg:w-20"
-                      : "w-14 lg:w-20 "
-                  } object-contain`}
-                />
-                {Pics.skillName && (
-                  <p className="text-sm lg:text-base font-medium text-[#DDDDDD]">{Pics.skillName}</p>
-                )}
-                <p className="text-xl lg:text-2xl font-semibold">{Pics.pargaphtext}</p>
-              </div>
+              <img
+                src={Pics.imageTwo}
+                alt={Pics.skillName || ""}
+                className={`${
+                  Pics.id === 4
+                    ? "w-12 h-12 lg:h-16 lg:w-16"
+                    : "w-12 lg:w-16"
+                } object-contain grayscale hover:grayscale-0 transition duration-500`}
+              />
+              {Pics.skillName && (
+                <p className="text-sm lg:text-base font-semibold text-slate-700 dark:text-slate-100">
+                  {Pics.skillName}
+                </p>
+              )}
             </motion.div>
           ))}
         </div>
       </div>
     </section>
   );
-}
+};
 
-export default Skills
+export default Skills;
